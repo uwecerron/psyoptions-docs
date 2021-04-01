@@ -1,98 +1,80 @@
 module.exports = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  title: "PsyOptions",
+  tagline: "Trustless options protocol on Solana",
+  url: "https://github.com/mithraiclabs",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/PsyOps.svg",
+  organizationName: "mithraiclabs", // Usually your GitHub org/user name.
+  projectName: "psyoptions-docs", // Usually your repo name.
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      title: "PsyOptions",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "PsyOptions logo",
+        src: "img/PsyOps.svg",
       },
       items: [
-        {to: 'blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          to: "https://medium.com/psyoptions",
+          label: "Blog",
+          position: "left",
+        },
+        {
+          href: "https://github.com/mithraiclabs",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Community",
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: "Discord",
+              href: "https://t.co/T28cJeQvS7?amp=1",
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2/',
+              label: "Twitter",
+              href: "https://twitter.com/PsyOptions",
+            },
+            {
+              label: "Telegram",
+              href: "https://t.co/SFP8AZH7kv?amp=1",
             },
           ],
         },
         {
-          title: 'Community',
+          title: "More",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "Blog",
+              to: "https://medium.com/psyoptions",
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: "GitHub",
+              href: "https://github.com/mithraiclabs",
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} PsyOptions. Built with Docusaurus.`,
     },
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
-        },
-        theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+            "https://github.com/facebook/docusaurus/edit/master/website/",
         },
       },
     ],
