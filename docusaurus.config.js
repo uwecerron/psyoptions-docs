@@ -1,8 +1,8 @@
 module.exports = {
   title: "PsyOptions",
   tagline: "Trustless options protocol on Solana",
-  url: "https://github.com/mithraiclabs",
-  baseUrl: "/",
+  url: "https://mithraiclabs.github.io",
+  baseUrl: "/psyoptions-docs/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/PsyOps.svg",
