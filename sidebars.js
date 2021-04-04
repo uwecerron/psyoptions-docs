@@ -2,11 +2,9 @@ module.exports = {
   someSidebar: {
     "Getting Started": ["intro", "glossary"],
     "Program Integration": ["program-integration-start"],
-    "Client Integration": [
+    "Clients": [
       "client-integration-overview",
-      {
-        Javascript: ["javascript-start"],
-      },
+      "javascript-functions",
       {
         Rust: ["rust-start"],
       },
