@@ -5,27 +5,39 @@ sidebar_label: Beta Testing
 slug: /devnet-testing/beta-testing
 ---
 
-PsyOptions is an American style options protocol built on the Solana blockchain. The principles that have guided the architecture and development of the core protocol are flexibility and composability. It is completely trustless. The core protocol makes no assumptions on how the options should be traded or priced. Options are represented as SPL Tokens, which means they can be traded on any DEX that supports SPL Tokens.
+PsyOptions is a vanilla options protocol built on the Solana blockchain.
+The principles that have guided the architecture and development of the core protocol are flexibility and composability.
+It is completely trustless. The core protocol makes no assumptions on how the options should be traded or priced.
+Options are represented as SPL Tokens, which means they can be traded on any DEX that supports SPL Tokens.
 
 V1 will support 100% collateralized, asset settled, covered calls and secured puts.
 
 ## Trading Options
 
-### Writing Options
+To buy or sell an option, select `Markets` in the navbar. You may adjust the expiration date and the underlying asset.
+The team recommends using the May 28, 2021 BTC/USDC option markets.
 
-To write an option, select the "Markets" at the top left bar and select the **MARKET Order Type** if there is already a desired order to be filled in the order book.
-
-If the market for a desired strike price has not been initialized by anyone yet, one will have to first initialize the market. Follow the instructions below.
-
-After initializing, there will be an option to place a buy/sell order at limit prices.
+After selecting the parameters, the page will populate with data from Serum if there is an orderbook for the indivual market.
+Note that each row represents a different option market and thus a different Serum market.
 
 ![PsyOrderbook](/img/beta-testing/PsyOrderbook.png)
 
-### Locked Collateral
+### Buy to open
 
-One must provide collateral equal to the amount specified by the option market.
+Buying an option (call/put) requires no collateral. It is simply a transaction on Serum's orderbook to purchase an option from the open market.
 
-For instance, for a SOL/USDC option with underlying asset size of 100, 100 SOL would be locked in order to mint the option token. The option writer will then receive two SPL Tokens. One represents the option, which the user may sell to generate yield, while the other represents the written contract (the claim on the underlying asset) and can be exchanged for the underlying asset post expiration.
+### Sell to open
+
+Selling an option is a bit more complex as an option may need to be minted. If the connected wallet does not have enough options to sell,
+then options will be written prior to selling.
+
+When options are written, the wallet will have it's underlying asset deducted as it's sent
+to the program to mint the options. The amount deducted is the contract `size`, which may differ based
+on the selected parameters.
+
+### Order types
+
+Both market and limit orders are supported.
 
 ## Checking Open Positions
 
@@ -41,7 +53,14 @@ The owning wallet must have enough of the quote asset (`contract size * strike p
 
 ## Initializing Markets
 
-To create fungible option SPL Tokens for trading in the options markets, one will have to initializing a market by supplying the following values: 1) Underlying Asset; 2) Quote Asset; 3) Contract Size; 4) Strike Price and; 5) Expiration.
+To create fungible option SPL Tokens for trading in the options markets, one will have to initializing a market by
+supplying the following values:
+
+- Underlying asset
+- Quote asset
+- Contract size
+- Strike price
+- Expiration
 
 ### How to Initialize a Market:
 

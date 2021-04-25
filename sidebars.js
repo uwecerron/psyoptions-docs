@@ -1,6 +1,7 @@
 module.exports = {
   someSidebar: {
     "Getting Started": ["intro", "glossary"],
+    "Architecture Design": ["arch-option-types"],
     "Program Integration": ["program-integration-start"],
     Clients: [
       "client-integration-overview",
@@ -9,6 +10,6 @@ module.exports = {
         Rust: ["rust-start"],
       },
     ],
-    "Devnet Testing": ["devnet-tokens", "devnet-beta-testing"],
+    "Devnet Testing": ["devnet-tokens", "beta-test-for", "devnet-beta-testing"],
   },
 };
