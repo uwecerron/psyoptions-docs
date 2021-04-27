@@ -40,5 +40,11 @@ As testing continues, here are some types of feedback we'd love to hear.
 - Are you able to mint and sell options?
 - Are you able to exercise or close positions from the `Open Positions` page?
 
-## New features
+### New features
 What sort of features would you like to see after experiencing the product?
+
+## How to provide feedback
+
+* [Bugs or recommendations](https://docs.google.com/forms/d/1Wpk_PYRCJLaMMsWvrIyvKq8sBFKYDCmajsDaLV_giEc)
+* [Discord](https://t.co/T28cJeQvS7?amp=1) join th conversation in the feature-requests channel!
+
