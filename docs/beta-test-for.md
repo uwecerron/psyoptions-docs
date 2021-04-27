@@ -5,7 +5,7 @@ sidebar_label: What to Test
 slug: /devnet-testing/what-to-test
 ---
 
-Thank your for being part of the PsyOptions beta testing!
+Thank you for being part of the PsyOptions beta testing!
 
 We're excited to share what we've built thus far and look forward to the community feedback going forward.
 As testing continues, here are some types of feedback we'd love to hear.
@@ -46,5 +46,5 @@ What sort of features would you like to see after experiencing the product?
 ## How to provide feedback
 
 * [Bugs or recommendations](https://docs.google.com/forms/d/1Wpk_PYRCJLaMMsWvrIyvKq8sBFKYDCmajsDaLV_giEc)
-* [Discord](https://t.co/T28cJeQvS7?amp=1) join th conversation in the feature-requests channel!
+* [Discord](https://t.co/T28cJeQvS7?amp=1) join the conversation in the feature-requests channel!
 
