@@ -1,7 +1,7 @@
 module.exports = {
   someSidebar: {
     "Getting Started": ["intro", "glossary"],
-    "Architecture Design": ["arch-option-types"],
+    "Architecture Design": ["arch-option-types", "arch-put-call"],
     "Program Integration": ["program-integration-start"],
     Clients: [
       "client-integration-overview",
