@@ -10,6 +10,6 @@ module.exports = {
         Rust: ["rust-start"],
       },
     ],
-    "Devnet Testing": ["devnet-tokens", "beta-test-for", "devnet-beta-testing"],
+    "Devnet": ["devnet-tokens", "beta-test-for", "devnet-beta-testing", "dev-serum-devnet-setup"],
   },
 };

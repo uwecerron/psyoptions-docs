@@ -2,7 +2,7 @@
 id: beta-test-for
 title: What to Test
 sidebar_label: What to Test
-slug: /devnet-testing/what-to-test
+slug: /devnet/what-to-test
 ---
 
 Thank you for being part of the PsyOptions beta testing!
