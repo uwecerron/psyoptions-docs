@@ -9,6 +9,10 @@ module.exports = {
   organizationName: "mithraiclabs", // Usually your GitHub org/user name.
   projectName: "psyoptions-docs", // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      // "light" | "dark"
+      defaultMode: "dark",
+    },
     navbar: {
       title: "PsyOptions",
       logo: {
@@ -19,6 +23,11 @@ module.exports = {
         {
           to: "https://medium.com/psyoptions",
           label: "Blog",
+          position: "left",
+        },
+        {
+          to: "https://psyoptions.io/",
+          label: "App",
           position: "left",
         },
         {
@@ -69,6 +78,9 @@ module.exports = {
     [
       "@docusaurus/preset-classic",
       {
+        theme: {
+          customCss: [require.resolve("./src/css/custom.css")],
+        },
         docs: {
           routeBasePath: "/",
           sidebarPath: require.resolve("./sidebars.js"),

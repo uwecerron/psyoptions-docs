@@ -1,0 +1,22 @@
+html[data-theme="light"] {
+  --ifm-color-primary: #dd3e76;
+  --ifm-color-primary-dark: #05044d;
+}
+
+html[data-theme="dark"] {
+  --ifm-menu-color: #aaa;
+  --ifm-hover-overlay: rgba(139, 234, 255, 0.1);
+
+  --ifm-heading-color: #eee;
+
+  --ifm-color-primary: #8beaff;
+  --ifm-color-primary-dark: #5a91ea;
+
+  --ifm-background-surface-color: #2a2a34;
+  --ifm-navbar-background-color: #36343e;
+  --ifm-background-color: #101017;
+}
+
+html[data-theme="dark"] .footer--dark {
+  --ifm-footer-background-color: #36343e;
+}
