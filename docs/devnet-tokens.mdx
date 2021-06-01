@@ -7,6 +7,41 @@ slug: /devnet-testing/setup-wallet
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+## Claiming Devnet Tokens - Walkthrough
+**DISCLAIMER ALL TOKENS HAVE 0 VALUE THESE ARE FOR TESTING PURPOSES ONLY**
+
+1. Make sure you get some SOL in your wallet (more specific docs coming soon)
+
+2. Navigate to the _Faucets_ page 
+<img
+  src={useBaseUrl("/img/wallet-setup/navigate-to-faucets-page.png")}
+  alt="navigate-to-faucet-page"
+/>
+
+3. Connect your favorite Solana supported wallet!
+<img
+  src={useBaseUrl("/img/wallet-setup/faucets-page.png")}
+  alt="click-to-connect-wallet"
+/>
+
+4. Select a token to airdrop
+<img
+  src={useBaseUrl("/img/wallet-setup/select-token.png")}
+  alt="select-token-for-airdrop"
+/>
+
+5. Approve the airdrop transaction
+<img
+  src={useBaseUrl("/img/wallet-setup/approve-airdrop-tx.png")}
+  alt="approve-airdrop-tx"
+/>
+
+6. GET PAID 🤑 🤑 🤑 (DISCLAIMER ALL TOKENS HAVE 0 VALUE THESE ARE FOR TESTING PURPOSES ONLY)
+<img
+  src={useBaseUrl("/img/wallet-setup/get-paid.png")}
+  alt="get-paid"
+/>
+
 ## Token Faucet and Mint Addresses
 
 ```
@@ -30,101 +65,3 @@ Mint Address: C6kYXcaRUMqeBF5fhg165RWU7AnpT9z92fvKNoMqjmz6
 Suggested airdrop per TX (please don't drain the faucet :( )): `100000000000` (100 BTC)
 ```
 
-## Claiming Devnet Tokens - Walkthrough
-
-_For PSY tokens, please go through the same method, and refer to the above mint and faucet address._
-
-1. Go to [Sollet.io](http://sollet.io/)
-
-2. On the top right of Sollet, click "Mainnet Beta" and switch to "http://devnet.solana.com".
-
-<img
-  src={useBaseUrl("/img/changeSolletNetwork.png")}
-  alt="changesolletNetwork"
-  style={{ zoom: "33%" }}
-/>
-
-3. Click "Request Airdrop" and wait for 1 SOL to be deposited into your wallet.
-
-   <img
-     src={useBaseUrl("/img/requestAirdrop.png")}
-     alt="requestAirdrop"
-     style={{ zoom: "50%" }}
-   />
-
-4. Click on the "+" symbol to add a new token
-
-   <img
-     src={useBaseUrl("/img/addToken.png")}
-     alt="addToken"
-     style={{ zoom: "50%" }}
-   />
-
-5. Select "Manual Input" and fill in the following information:
-
-   1. Token Mint Address: HinfVnJuzMtJsyuLE2ArYCChDZB6FCxEu2p3CQeMcDiF
-   2. Token Name: USDC
-   3. Token Symbol: USDC
-
-   <img
-     src={useBaseUrl('/img/addTokenInput.png')}
-     alt="addTokenInput"
-     style={{ zoom: "33%" }}
-   />
-
-6. Click add, refresh the wallet and wait for the address to load.
-
-   ![associatedTokenMetadata](../static/img/associatedTokenMetadata.png)
-
-7. Copy the Associated Token Metadata.
-
-8. Go to https://spl-token-ui.netlify.app/#/token-faucets
-
-9. In the top right, change to "devnet"
-
-   <img
-     src={useBaseUrl("/img/faucetChangeNetwork.png")}
-     alt="faucetChangeNetwork"
-     style={{ zoom: "33%" }}
-   />
-
-10. Click "Token Airdrop"
-
-11. Fill in the following:
-
-    1. Admin: Leave empty.
-    2. Token Destination Address: Paste the copied Associated Token Metadata.
-    3. Faucet Address: `BmaVN3Wut1k2MtrcsxjTn919GdBJ2gzVLTtbiybnAPnR`
-    4. Amount: `1000000000000`
-
-<img
-  src={useBaseUrl("/img/faucetForm.png")}
-  alt="faucetForm"
-  style={{ zoom: "33%" }}
-/>
-
-12. Click "Airdrop Tokens" and a Sollet Wallet window will pop-up.
-
-13. Switch to the Sollet Wallet window and click "Connect".
-
-    <img
-      src={useBaseUrl("/img/solletConnect.png")}
-      alt="solletConnect"
-      style={{ zoom: "33%" }}
-    />
-
-    14. Approve the transaction.
-
-        <img
-          src={useBaseUrl("/img/approveTransaction.png")}
-          alt="approveTransaction"
-          style={{ zoom: "33%" }}
-        />
-
-14. Check your Sollet if you have received the airdropped tokens.
-
-    <img
-      src={useBaseUrl("/img/solletBalance.png")}
-      alt="solletBalance"
-      style={{ zoom: "33%" }}
-    />
