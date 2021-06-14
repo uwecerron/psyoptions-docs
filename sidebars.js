@@ -10,6 +10,7 @@ module.exports = {
         Rust: ["rust-start"],
       },
     ],
+    "Designers": ["design-fonts-styles"],
     "Devnet Testing": ["devnet-tokens", "beta-test-for", "devnet-beta-testing"],
   },
 };
