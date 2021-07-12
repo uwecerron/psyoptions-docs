@@ -29,7 +29,7 @@ More docs will be coming soon on how to use the following instructions.
 
 ### initializeAccountsForMarket
 
-▸ **initializeAccountsForMarket**(`object`: { `connection`: _Connection_ ; `payer`: _Account_ ; `programId`: _string_ \| _PublicKey_ }): _Promise_<{ `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `signers`: _Account_[] ; `transaction`: _Transaction_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ }\>
+▸ **initializeAccountsForMarket**(`object`: { `connection`: _Connection_ ; `payer`: _Account_ ; `programId`: _string_ \| _PublicKey_ }): _Promise_<{ `optionMintKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `signers`: _Account_[] ; `transaction`: _Transaction_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ }\>
 
 Generate and initialize the Accounts to be used for the new option market.
 
@@ -46,7 +46,7 @@ Generate and initialize the Accounts to be used for the new option market.
 
 ### initializeMarketInstruction
 
-▸ **initializeMarketInstruction**(`object`: { `expirationUnixTimestamp`: _number_ ; `fundingAccountKey`: _PublicKey_ ; `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `quoteAmountPerContract`: _number_ ; `quoteAssetMintKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `underlyingAmountPerContract`: _number_ ; `underlyingAssetMintKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
+▸ **initializeMarketInstruction**(`object`: { `expirationUnixTimestamp`: _number_ ; `fundingAccountKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `quoteAmountPerContract`: _number_ ; `quoteAssetMintKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `underlyingAmountPerContract`: _number_ ; `underlyingAssetMintKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
 
 Generate the instruction for `InitializeMarket`
 
@@ -60,7 +60,6 @@ Instruction to initialize a new option market. Strike price is determined by
 | `object`                             | _object_    | -                                                                                          |
 | `object.expirationUnixTimestamp`     | _number_    | unix timestamp when the option market expires                                              |
 | `object.fundingAccountKey`           | _PublicKey_ | The payer account that is funding the SOL for the TX                                       |
-| `object.optionMarketKey`             | _PublicKey_ | key for a new Account that will store the data for the options market                      |
 | `object.optionMintKey`               | _PublicKey_ | uninitialized SPL Token mint to be used as the Option Token mint for the new option market |
 | `object.programId`                   | _PublicKey_ | the public key for the PsyOptions program                                                  |
 | `object.quoteAmountPerContract`      | _number_    | amount of quote needed to exercise the option                                              |
@@ -77,7 +76,7 @@ Instruction to initialize a new option market. Strike price is determined by
 
 ### mintCoveredCallInstruction
 
-▸ **mintCoveredCallInstruction**(`object`: { `authorityPubkey`: _PublicKey_ ; `fundingAccountKey`: _PublicKey_ ; `mintedOptionDestKey`: _PublicKey_ ; `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `underlyingAssetSrcKey`: _PublicKey_ ; `underlyingMintKey`: _PublicKey_ ; `writerTokenDestKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
+▸ **mintCoveredCallInstruction**(`object`: { `authorityPubkey`: _PublicKey_ ; `fundingAccountKey`: _PublicKey_ ; `mintedOptionDestKey`: _PublicKey_ ; `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `size`: _BN_; `underlyingAssetPoolKey`: _PublicKey_ ; `underlyingAssetSrcKey`: _PublicKey_ ; `underlyingMintKey`: _PublicKey_ ; `writerTokenDestKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
 
 Generate the instruction for `MintCoveredCall`
 
@@ -95,6 +94,7 @@ underlying asset to the option market's pool.
 | `object.optionMarketKey`        | _PublicKey_ | public key for the opton market                                                               |
 | `object.optionMintKey`          | _PublicKey_ | public key of the option token mint for the option market                                     |
 | `object.programId`              | _PublicKey_ | the public key for the PsyOptions program                                                     |
+| `object.size`                   | _BN_        | number of option contracts to mint. Defaults to 1                                             |
 | `object.underlyingAssetPoolKey` | _PublicKey_ | public key of the underlying asset pool for the market, where the asset will be transfered to |
 | `object.underlyingAssetSrcKey`  | _PublicKey_ | account the underlying asset will be transfered from                                          |
 | `object.underlyingMintKey`      | _PublicKey_ | public key of the underlying asset mint                                                       |
@@ -107,7 +107,7 @@ underlying asset to the option market's pool.
 
 ### exerciseCoveredCallInstruction
 
-▸ **exerciseCoveredCallInstruction**(`object`: { `exerciserQuoteAssetAuthorityKey`: _PublicKey_ ; `exerciserQuoteAssetKey`: _PublicKey_ ; `exerciserUnderlyingAssetKey`: _PublicKey_ ; `fundingAccountKey`: _PublicKey_ ; `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `optionTokenAuthorityKey`: _PublicKey_ ; `optionTokenKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `quoteAssetMintKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
+▸ **exerciseCoveredCallInstruction**(`object`: { `exerciserQuoteAssetAuthorityKey`: _PublicKey_ ; `exerciserQuoteAssetKey`: _PublicKey_ ; `exerciserUnderlyingAssetKey`: _PublicKey_ ; `fundingAccountKey`: _PublicKey_ ; `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `optionTokenAuthorityKey`: _PublicKey_ ; `optionTokenKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `quoteAssetMintKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `size`: _BN_; `underlyingAssetPoolKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
 
 Generate the instruction for `ExerciseCoveredCall`.
 
@@ -136,6 +136,7 @@ per contract, aka `contract size * price`.
 | `object.programId`                       | _PublicKey_ | the public key for the PsyOptions program                                                       |
 | `object.quoteAssetMintKey`               | _PublicKey_ | public key for the quote asset mint                                                             |
 | `object.quoteAssetPoolKey`               | _PublicKey_ | public key of the quote asset pool for the market, where the asset will be transfered to        |
+| `object.size`                            | _BN_        | number of options to exercise. Defaults to 1                                                    |
 | `object.underlyingAssetPoolKey`          | _PublicKey_ | public key of the underlying asset pool for the market, where the asset will be transfered from |
 
 **Returns:** _Promise_<TransactionInstruction\>
@@ -144,7 +145,7 @@ per contract, aka `contract size * price`.
 
 ### closePositionInstruction
 
-▸ **closePositionInstruction**(`object`: { `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `optionTokenSrcAuthKey`: _PublicKey_ ; `optionTokenSrcKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `underlyingAssetDestKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ ; `writerTokenSourceAuthorityKey`: _PublicKey_ ; `writerTokenSourceKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
+▸ **closePositionInstruction**(`object`: { `optionMarketKey`: _PublicKey_ ; `optionMintKey`: _PublicKey_ ; `optionTokenSrcAuthKey`: _PublicKey_ ; `optionTokenSrcKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `size`: _BN_; `underlyingAssetDestKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ ; `writerTokenSourceAuthorityKey`: _PublicKey_ ; `writerTokenSourceKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
 
 Generate the instruction for `ClosePosition`.
 
@@ -163,6 +164,7 @@ per contract, aka `contract size`.
 | `object.optionTokenSrcAuthKey`         | _PublicKey_ | Onwer of the optionTokenSrcKey, likely the wallet that owns the account                         |
 | `object.optionTokenSrcKey`             | _PublicKey_ | public key of the account where the Option Token will be burned from                            |
 | `object.programId`                     | _PublicKey_ | the public key for the PsyOptions program                                                       |
+| `object.size`                          | _BN_        | number of option & writer tokens to burn to unlock underlying. Defaults to 1                    |
 | `object.underlyingAssetDestKey`        | _PublicKey_ | public key of the account to send the underlying asset to                                       |
 | `object.underlyingAssetPoolKey`        | _PublicKey_ | public key of the underlying asset pool for the market, where the asset will be transfered from |
 | `object.writerTokenMintKey`            | _PublicKey_ | public key of the writer token mint for the option market                                       |
@@ -175,7 +177,7 @@ per contract, aka `contract size`.
 
 ### exchangeWriterTokenForQuoteInstruction
 
-▸ **exchangeWriterTokenForQuoteInstruction**(`object`: { `optionMarketKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `quoteAssetDestKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ ; `writerTokenSourceAuthorityKey`: _PublicKey_ ; `writerTokenSourceKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
+▸ **exchangeWriterTokenForQuoteInstruction**(`object`: { `optionMarketKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `quoteAssetDestKey`: _PublicKey_ ; `quoteAssetPoolKey`: _PublicKey_ ; `size`: _BN_; `writerTokenMintKey`: _PublicKey_ ; `writerTokenSourceAuthorityKey`: _PublicKey_ ; `writerTokenSourceKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
 
 Generate the instruction for `ExchangeWriterTokenForQuote`
 
@@ -194,6 +196,7 @@ amount per contract, aka `contract size * price`.
 | `object.programId`                     | _PublicKey_ | the public key for the PsyOptions program                                                  |
 | `object.quoteAssetDestKey`             | _PublicKey_ | public key of the account to send the quote asset to                                       |
 | `object.quoteAssetPoolKey`             | _PublicKey_ | public key of the quote asset pool for the market, where the asset will be transfered from |
+| `object.size`                          | _BN_        | number of writer tokens to burn to claim for quote asset. Defaults to 1                    |
 | `object.writerTokenMintKey`            | _PublicKey_ | public key of the writer token mint for the option market                                  |
 | `object.writerTokenSourceAuthorityKey` | _PublicKey_ | owner of the writerTokenSourceKey, likely the wallet making the transaction                |
 | `object.writerTokenSourceKey`          | _PublicKey_ | public key of the account where the Writer Token will be burned from                       |
@@ -204,7 +207,7 @@ amount per contract, aka `contract size * price`.
 
 ### closePostExpirationCoveredCallInstruction
 
-▸ **closePostExpirationCoveredCallInstruction**(`object`: { `optionMarketKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `underlyingAssetDestKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ ; `writerTokenSourceAuthorityKey`: _PublicKey_ ; `writerTokenSourceKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
+▸ **closePostExpirationCoveredCallInstruction**(`object`: { `optionMarketKey`: _PublicKey_ ; `programId`: _PublicKey_ ; `size`: _BN_; `underlyingAssetDestKey`: _PublicKey_ ; `underlyingAssetPoolKey`: _PublicKey_ ; `writerTokenMintKey`: _PublicKey_ ; `writerTokenSourceAuthorityKey`: _PublicKey_ ; `writerTokenSourceKey`: _PublicKey_ }): _Promise_<TransactionInstruction\>
 
 Generate the instruction for `ClosePostExpiration`
 
@@ -221,6 +224,7 @@ amount per contract, aka `contract size`.
 | `object`                               | _object_    | -                                                                                               |
 | `object.optionMarketKey`               | _PublicKey_ | public key for the opton market                                                                 |
 | `object.programId`                     | _PublicKey_ | the public key for the PsyOptions program                                                       |
+| `object.size`                          | _BN_        | number of positions to close (writer tokens to burn). Defaults to 1                             |
 | `object.underlyingAssetDestKey`        | _PublicKey_ | public key of the account to send the underlying asset to                                       |
 | `object.underlyingAssetPoolKey`        | _PublicKey_ | public key of the underlying asset pool for the market, where the asset will be transfered from |
 | `object.writerTokenMintKey`            | _PublicKey_ | public key of the writer token mint for the option market                                       |
