@@ -1,7 +1,7 @@
 ---
-id: javascript-functions
-title: Javascript
-sidebar_label: Javascript
+id: javascript-api
+title: Javascript API
+sidebar_label: API
 slug: /client-integration/javascript
 ---
 
