@@ -12,7 +12,7 @@ Options are represented as SPL Tokens, which means they can be traded on any DEX
 
 V1 will support 100% collateralized, asset settled, covered calls and secured puts.
 
-## Architecture
+## Architecture {#architecture}
 
 There are five main parameters that the protocol uses when interacting with options markets.
 

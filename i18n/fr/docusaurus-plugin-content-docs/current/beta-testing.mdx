@@ -1,0 +1,70 @@
+---
+id: devnet-beta-testing
+title: Beta Testing
+sidebar_label: Beta Testing
+slug: /devnet-testing/beta-testing
+---
+
+PsyOptions is a vanilla options protocol built on the Solana blockchain. The principles that have guided the architecture and development of the core protocol are flexibility and composability. It is completely trustless. The core protocol makes no assumptions on how the options should be traded or priced. Options are represented as SPL Tokens, which means they can be traded on any DEX that supports SPL Tokens.
+
+V1 will support 100% collateralized, asset settled, covered calls and secured puts.
+
+## Trading Options
+
+To buy or sell an option, select `Markets` in the navbar. You may adjust the expiration date and the underlying asset. The team recommends using the May 28, 2021 BTC/USDC option markets.
+
+After selecting the parameters, the page will populate with data from Serum if there is an orderbook for the indivual market. Note that each row represents a different option market and thus a different Serum market.
+
+![PsyOrderbook](/img/beta-testing/PsyOrderbook.png)
+
+### Buy to open
+
+Buying an option (call/put) requires no collateral. It is simply a transaction on Serum's orderbook to purchase an option from the open market.
+
+### Sell to open
+
+Selling an option is a bit more complex as an option may need to be minted. If the connected wallet does not have enough options to sell, then options will be written prior to selling.
+
+When options are written, the wallet will have it's underlying asset deducted as it's sent to the program to mint the options. The amount deducted is the contract `size`, which may differ based on the selected parameters.
+
+### Order types
+
+Both market and limit orders are supported.
+
+## Checking Open Positions
+
+Click on the "Open Positions" option at the top left bar to view all current positions in the options market.
+
+![PsyOpenPositions](/img/beta-testing/PsyOpenPositions.png)
+
+### Exercising
+
+If the option has not expired, clicking the `Exercise` button will prompt a transaction to exercise the option.
+
+The owning wallet must have enough of the quote asset (`contract size * strike price`) to successfully exercise.
+
+## Initializing Markets
+
+To create fungible option SPL Tokens for trading in the options markets, one will have to initializing a market by supplying the following values:
+
+- Underlying asset
+- Quote asset
+- Contract size
+- Strike price
+- Expiration
+
+### How to Initialize a Market:
+
+1. Click on Initialize
+
+![tempsnip_1](/img/beta-testing/tempsnip_1.png)
+
+2. Select the following parameters: Expiration Date (as per expiration of option), Underlying Asset (to be traded in the option), Quote Asset (to be supplied in the trade), Contract Size (size of option), Base Price (strike price of option)
+
+![tempsnip_2](/img/beta-testing/tempsnip_2.png)
+
+3. Select "Multi Strikes" if you wish to list multiple contracts at designated strike price intervals
+
+![tempsnip_3](/img/beta-testing/tempsnip_3.png)
+
+4. Click "Initialize Market"

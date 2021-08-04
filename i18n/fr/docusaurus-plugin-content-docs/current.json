@@ -1,0 +1,46 @@
+{
+  "version.label": {
+    "message": "Suivant",
+    "description": "The label for version current"
+  },
+  "sidebar.someSidebar.category.Getting Started": {
+    "message": "Commencer",
+    "description": "The label for category Getting Started in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Architecture Design": {
+    "message": "Conception d'architecture",
+    "description": "The label for category Architecture Design in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Amercian Style Protocol (V1)": {
+    "message": "Protocole de style Amercian (V1)",
+    "description": "The label for category Amercian Style Protocol (V1) in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Program Integration": {
+    "message": "Intégration de programme",
+    "description": "The label for category Program Integration in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Clients": {
+    "message": "Clients",
+    "description": "The label for category Clients in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.JavaScript": {
+    "message": "JavaScript",
+    "description": "The label for category JavaScript in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Rust": {
+    "message": "Rust",
+    "description": "The label for category Rust in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Designers": {
+    "message": "Créateurs",
+    "description": "The label for category Designers in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.Devnet Testing": {
+    "message": "Devnet Testing",
+    "description": "The label for category Devnet Testing in sidebar someSidebar"
+  },
+  "sidebar.someSidebar.category.PSY Token": {
+    "message": "Jeton PSY",
+    "description": "The label for category PSY Token in sidebar someSidebar"
+  }
+}

@@ -21,6 +21,10 @@ module.exports = {
       },
       items: [
         {
+          type: 'localeDropdown',
+          position: 'left',
+        },
+        {
           to: "https://medium.com/psyoptions",
           label: "Blog",
           position: "left",
@@ -73,6 +77,10 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} PsyOptions. Built with Docusaurus.`,
     },
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
   },
   presets: [
     [
