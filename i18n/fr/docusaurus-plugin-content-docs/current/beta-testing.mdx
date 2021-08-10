@@ -1,70 +1,70 @@
 ---
 id: devnet-beta-testing
-title: Beta Testing
-sidebar_label: Beta Testing
+title: Bêta-test
+sidebar_label: Bêta-test
 slug: /devnet-testing/beta-testing
 ---
 
-PsyOptions is a vanilla options protocol built on the Solana blockchain. The principles that have guided the architecture and development of the core protocol are flexibility and composability. It is completely trustless. The core protocol makes no assumptions on how the options should be traded or priced. Options are represented as SPL Tokens, which means they can be traded on any DEX that supports SPL Tokens.
+PsyOptions est un protocole d'options vanilla construit sur la blockchain Solana. Les principes qui ont guidé l'architecture et le développement du protocole principal sont la flexibilité et la composabilité. Elle est totalement sans confiance. Le protocole principal ne fait aucune hypothèse quant à la manière dont les options doivent être négociées ou tarifiées. Les options sont représentées en tant que jetons SPL, ce qui signifie qu'elles peuvent être échangées sur n'importe quel DEX qui supporte les jetons SPL.
 
-V1 will support 100% collateralized, asset settled, covered calls and secured puts.
+V1 soutiendra 100 % garantis, le règlement d’actifs, les appels couverts et les mises en vente sécurisées.
 
-## Trading Options
+## Options de trading
 
-To buy or sell an option, select `Markets` in the navbar. You may adjust the expiration date and the underlying asset. The team recommends using the May 28, 2021 BTC/USDC option markets.
+Pour acheter ou vendre une option, sélectionnez `Marchés` dans la barre de navigation. Vous pouvez ajuster la date d'expiration et l'actif sous-jacent. L'équipe recommande d'utiliser les marchés d'options BTC/USDC du 28 mai 2021.
 
-After selecting the parameters, the page will populate with data from Serum if there is an orderbook for the indivual market. Note that each row represents a different option market and thus a different Serum market.
+Après avoir sélectionné les paramètres, la page sera remplie de données de Sérum s'il y a un carnet de commandes pour le marché indivual. Notez que chaque ligne représente un marché d'options différent et donc un marché sérum différent.
 
 ![PsyOrderbook](/img/beta-testing/PsyOrderbook.png)
 
-### Buy to open
+### Acheter pour ouvrir
 
-Buying an option (call/put) requires no collateral. It is simply a transaction on Serum's orderbook to purchase an option from the open market.
+L'achat d'une option (appel/put) ne nécessite aucune garantie. Il s'agit simplement d'une transaction sur le carnet de commandes de Sérum pour acheter une option sur le marché ouvert.
 
-### Sell to open
+### Vendre pour ouvrir
 
-Selling an option is a bit more complex as an option may need to be minted. If the connected wallet does not have enough options to sell, then options will be written prior to selling.
+Vendre une option est un peu plus complexe car une option peut devoir être modifiée. Si le portefeuille connecté n'a pas assez d'options à vendre, alors les options seront écrites avant de vendre.
 
-When options are written, the wallet will have it's underlying asset deducted as it's sent to the program to mint the options. The amount deducted is the contract `size`, which may differ based on the selected parameters.
+Lorsque les options sont écrites, le portefeuille aura son actif sous-jacent déduit lorsqu'il sera envoyé au programme pour modifier les options. Le montant déduit est la taille `du contrat`, qui peut différer selon les paramètres sélectionnés.
 
-### Order types
+### Types de commande
 
-Both market and limit orders are supported.
+Le marché et les ordres à durée limitée sont pris en charge.
 
-## Checking Open Positions
+## Vérification des positions ouvertes
 
-Click on the "Open Positions" option at the top left bar to view all current positions in the options market.
+Cliquez sur l'option "Ouvrir les positions" en haut à gauche pour afficher toutes les positions actuelles sur le marché des options.
 
-![PsyOpenPositions](/img/beta-testing/PsyOpenPositions.png)
+![Positions ouvertes](/img/beta-testing/PsyOpenPositions.png)
 
-### Exercising
+### Exercice
 
-If the option has not expired, clicking the `Exercise` button will prompt a transaction to exercise the option.
+Si l'option n'a pas expiré, cliquer sur le bouton `Exercice` vous demandera une transaction pour exercer l'option.
 
-The owning wallet must have enough of the quote asset (`contract size * strike price`) to successfully exercise.
+Le portefeuille propriétaire doit avoir assez de l'actif de cotation (`taille du contrat * prix de levée`) pour pouvoir exercer avec succès.
 
-## Initializing Markets
+## Initialisation des marchés
 
-To create fungible option SPL Tokens for trading in the options markets, one will have to initializing a market by supplying the following values:
+Pour créer des jetons SPL d'option fongibles pour le trading sur les marchés d'options, il faudra initialiser un marché en fournissant les valeurs suivantes :
 
-- Underlying asset
-- Quote asset
-- Contract size
-- Strike price
+- Ressource sous-jacente
+- Actif de devis
+- Taille du contrat
+- Prix de grève
 - Expiration
 
-### How to Initialize a Market:
+### Comment initialiser un marché :
 
-1. Click on Initialize
+1. Cliquez sur Initialiser
 
 ![tempsnip_1](/img/beta-testing/tempsnip_1.png)
 
-2. Select the following parameters: Expiration Date (as per expiration of option), Underlying Asset (to be traded in the option), Quote Asset (to be supplied in the trade), Contract Size (size of option), Base Price (strike price of option)
+2. Sélectionnez les paramètres suivants : Date d'expiration (selon l'expiration de l'option), Ressource sous-jacente (à échanger dans l'option), Actif de devis (à fournir dans la négociation), Taille du contrat (taille de l'option), Prix de base (prix d'option)
 
-![tempsnip_2](/img/beta-testing/tempsnip_2.png)
+![format@@0 tempsnip_2](/img/beta-testing/tempsnip_2.png)
 
-3. Select "Multi Strikes" if you wish to list multiple contracts at designated strike price intervals
+3. Sélectionnez "Multi Strikes" si vous souhaitez lister plusieurs contrats à intervalles de prix de levée désignés
 
-![tempsnip_3](/img/beta-testing/tempsnip_3.png)
+![format@@0 tempsnip_3](/img/beta-testing/tempsnip_3.png)
 
-4. Click "Initialize Market"
+4. Cliquez sur "Initialiser le marché"

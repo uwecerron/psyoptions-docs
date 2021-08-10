@@ -1,22 +1,22 @@
 ---
 id: design-fonts-styles
-title: Fonts and Styles
-sidebar_label: Fonts and Styles
+title: Polices et styles
+sidebar_label: Polices et styles
 slug: /fonts-and-styles
 ---
 
-The PsyOptions community has proven to be passionate in displaying their design skills by creating PsyOptions themed designs, and to help cater to this process we have decided to fill this design page with all the necessary items needed to take these community designs to the next level. Below you will find SVG files of our different logos, and the multiple fonts we use throughout the product.
+La communauté PsyOptions s'est avérée passionnée par la présentation de ses compétences en matière de design en créant des designs sur le thème PsyOptions, et pour nous aider à répondre à ce processus, nous avons décidé de remplir cette page de design avec tous les éléments nécessaires pour que ces conceptions de la communauté soient au niveau supérieur. Vous trouverez ci-dessous les fichiers SVG de nos différents logos, et les multiples polices que nous utilisons tout au long du produit.
 
-#### PsyOptions Logo
-We have a few different logo variations that can be used in your design process. The primary one which you all know and love, and a secondary one that appears on the front page of our website.
+#### Logo de PsyOptions
+Nous avons quelques variations de logo différentes qui peuvent être utilisées dans votre processus de conception. La première que vous connaissez tous et que vous aimez, et une seconde qui apparaît sur la page d'accueil de notre site.
 
-![PsyOps](/img/PsyOps.svg) ![Secondary](/img/Secondary.svg)
+![Opérations Criminelles](/img/PsyOps.svg) ![Secondaire](/img/Secondary.svg)
 
-#### PsyOptions Fonts
-For our headers, we use the Goldman font in all caps. We also use this font for our logo with the proper capitalization being “PsyOptions”.
+#### Polices PsyOptions
+Pour nos en-têtes, nous utilisons la police Goldman dans toutes les majuscules. Nous utilisons également cette police pour notre logo dont la propre majuscule est « PsyOptions ».
 
-![goldman](/img/designers/goldman.png)
+![homme d'or](/img/designers/goldman.png)
 
-For everything outside of our headers, we use the Manrope font with a font weight of 500. This font could also be used for headers with the font weight being 700 or 800, however, this font should not be used for the logo text.
+Pour tout ce qui se trouve en dehors de nos en-têtes, nous utilisons la police Manrope avec un poids de police de 500. Cette police peut également être utilisée pour les en-têtes dont le poids de police est de 700 ou 800, Cependant, cette police ne doit pas être utilisée pour le texte du logo.
 
 ![manrope](/img/designers/manrope.png)

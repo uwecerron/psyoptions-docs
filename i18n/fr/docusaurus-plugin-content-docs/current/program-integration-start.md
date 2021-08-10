@@ -1,9 +1,9 @@
 ---
 id: program-integration-start
-title: Program Integration
-sidebar_label: Quick Start
+title: Intégration de programme
+sidebar_label: Démarrage rapide
 slug: /program-integration/quick-start
 ---
 
 
-## Coming soon
+## Bientôt disponible

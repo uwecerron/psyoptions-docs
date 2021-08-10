@@ -1,15 +1,15 @@
 ---
 id: arch-put-call
-title: Call vs Put
-sidebar_label: Call vs Put
+title: Appel vs Put
+sidebar_label: Appel vs Put
 slug: /architecture/call-put
 ---
 
-The two option contract types (not styles) are Calls and Puts. A call option gives the option holder the right but not the obligation to buy the underlying asset at a specified price by, or at, a certain date. A put option gives the option holder the right but not the obligation to sell the underlying asset at a specified price by, or at, a certain date.
+Les deux types de contrats d'options (pas les styles) sont les Appels et les Puts. Une option d'achat donne au détenteur de l'option le droit mais pas l'obligation d'acheter l'actif sous-jacent à un prix spécifié, par ou à une certaine date. Une option de vente donne au détenteur de l'option le droit mais pas l'obligation de vendre l'actif sous-jacent à un prix spécifié, par ou à une certaine date.
 
-PsyOption option positions are fully collateralized meaning only covered calls and secured puts are supported. To write a Call option, the option writer locks up the underlying asset. Similarly, to write a Put, the option writer locks up the quote asset.
+Les positions des options PsyOption sont entièrement collateralisées, ce qui signifie que seuls les appels couverts et les mises sécurisées sont pris en charge. Pour écrire une option d'appel, le créateur d'options verrouille l'actif sous-jacent. De même, pour écrire un Put, le rédacteur de l'option verrouille l'actif de cotation.
 
-### Under the hood
-At the protocol level, there is no concept of Call vs Put. The astute reader will recognize that if you parameterize the underlying and quote asset for options, the function of the Call and Put has an inverse relationship to the assets. More plainly, the protocol does not have an instruction to mint a Put, only an instruction to mint a Call.
+### Sous la capuche
+Au niveau du protocole, il n'y a pas de concept de Call vs Put. Le lecteur astucieux reconnaîtra que si vous paramétrez l'actif sous-jacent et cote pour les options, la fonction de l'appel et de la mise a une relation inverse avec les actifs. Plus clairement, le protocole n'a pas d'instruction pour toucher un Put, seulement une instruction pour passer un appel.
 
-The Put is created by using the reciprocal asset pair. So a Put for SOL/USDC would simply be a call for USDC/SOL.
+Le Put est créé en utilisant la paire d'actifs réciproques. Donc, un Put for SOL/USDC serait tout simplement un appel à USDC/SOL.

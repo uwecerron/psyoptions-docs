@@ -1,49 +1,49 @@
 ---
 id: beta-test-for
-title: What to Test
-sidebar_label: What to Test
+title: Quoi tester
+sidebar_label: Quoi tester
 slug: /devnet-testing/what-to-test
 ---
 
-Thank you for being part of the PsyOptions beta testing!
+Merci de faire partie du bêta-test PsyOptions !
 
-We're excited to share what we've built thus far and look forward to the community feedback going forward. As testing continues, here are some types of feedback we'd love to hear.
+Nous sommes heureux de partager ce que nous avons construit jusqu'à présent et nous attendons avec impatience les commentaires de la communauté. Au fur et à mesure que les tests se poursuivent, voici quelques types de retours que nous aimerions entendre.
 
-## Things to do!
+## Les choses à faire!
 
-### The basics
+### Les bases
 
-1. Write a [Covered CALL](https://www.investopedia.com/terms/c/coveredcall.asp)
-2. Write a [Cash Secured PUT](https://www.investopedia.com/trading/introduction-to-put-writing/)
-3. Buy a contract from the orderbook
-4. Exercise a contract
-5. Write a covered contract and then close out your position early
+1. Écrire un [APPEL couvert](https://www.investopedia.com/terms/c/coveredcall.asp)
+2. Écrivez un PUT [Sécurisé en argent](https://www.investopedia.com/trading/introduction-to-put-writing/)
+3. Acheter un contrat dans le carnet de commandes
+4. Exercice d'un contrat
+5. Écrivez un contrat couvert et terminez votre position plus tôt
 
-### Advanced
+### Avancé
 
-1. Create a new option market
-2. Initialize a Serum market for a new option market
+1. Créer un nouveau marché d'options
+2. Initialiser un marché de sérum pour un nouveau marché d'options
 
-## Feedback to consider
+## Commentaires à considérer
 
-### User Interface/User Experience
+### Interface/Expérience utilisateur
 
-- Was navigating the site self explanatory?
-- Any areas of improvement for trading options?
-- Any areas of improvement for initializing option markets?
-- Is it clear how to exercise or close positions?
+- La navigation sur le site a-t-elle été explicative ?
+- Y a-t-il des domaines d'amélioration pour les options de trading ?
+- Des domaines d'amélioration pour l'initialisation des marchés d'options ?
+- Est-il clair de savoir comment exercer ou fermer des positions ?
 
-### Functionality
+### Fonctionnalité
 
-- Does buying an option get reflected in your wallet?
-- Are you able to mint and sell options?
-- Are you able to exercise or close positions from the `Open Positions` page?
+- Est-ce que l'achat d'une option se répercute dans votre portefeuille?
+- Êtes-vous en mesure de vendre des options ?
+- Êtes-vous en mesure d'exercer ou de fermer des positions à partir de la page `Positions ouvertes`?
 
-### New features
-What sort of features would you like to see after experiencing the product?
+### Nouvelles fonctionnalités
+Quels types de fonctionnalités souhaiteriez-vous voir après avoir expérimenté le produit ?
 
-## How to provide feedback
+## Comment fournir des commentaires
 
-* [Bugs or recommendations](https://docs.google.com/forms/d/1Wpk_PYRCJLaMMsWvrIyvKq8sBFKYDCmajsDaLV_giEc)
-* [Discord](https://t.co/T28cJeQvS7?amp=1) join the conversation in the feature-requests channel!
+* [Bugs ou recommandations](https://docs.google.com/forms/d/1Wpk_PYRCJLaMMsWvrIyvKq8sBFKYDCmajsDaLV_giEc)
+* [Discord](https://t.co/T28cJeQvS7?amp=1) rejoignez la conversation dans le canal des demandes de fonctionnalités !
 

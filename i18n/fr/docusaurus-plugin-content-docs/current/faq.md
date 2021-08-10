@@ -1,68 +1,68 @@
 ---
 id: faq
-title: FAQ
-sidebar_label: FAQ
+title: Foire Aux Questions
+sidebar_label: Foire Aux Questions
 slug: /faq
 ---
 
-- [What are options?](#what-are-options)
-- [Why did PsyOptions choose to build on Solana?](#why-did-psyoptions-choose-to-build-on-solana)
-- [How will PsyOptions fit within the Solana Ecosystem?](#how-will-psyoptions-fit-within-the-solana-ecosystem)
-- [Does PsyOptions offer American or European style options?](#does-psyoptions-offer-american-or-european-style-options)
-- [Will there be an airdrop?](#will-there-be-an-airdrop)
-- [Does PsyOptions offer leverage?](#does-psyoptions-offer-leverage)
-- [What type of assets does PsyOptions support?](#what-type-of-assets-does-psyoptions-support)
-- [Can I create my own markets on PsyOptions?](#can-i-create-my-own-markets-on-psyoptions)
-- [How are options priced on PsyOptions?](#how-are-options-priced-on-psyoptions)
-- [Why does the option writer receive two separate tokens? Isn’t the written contract tied to the option?](#why-does-the-option-writer-receive-two-separate-tokens-isnt-the-written-contract-tied-to-the-option)
-- [How is PsyOptions different from the other options protocols out there?](#how-is-psyoptions-different-from-the-other-options-protocols-out-there)
+- [Que sont les options?](#what-are-options)
+- [Pourquoi PsyOptions a-t-elle choisi de construire sur Solana?](#why-did-psyoptions-choose-to-build-on-solana)
+- [Comment les PsyOptions s'intègreront-elles à l'écosystème Solana?](#how-will-psyoptions-fit-within-the-solana-ecosystem)
+- [PsyOptions offre-t-elle des options de style américain ou européen?](#does-psyoptions-offer-american-or-european-style-options)
+- [Y aura-t-il un parachutage?](#will-there-be-an-airdrop)
+- [PsyOptions offre-t-elle un effet de levier ?](#does-psyoptions-offer-leverage)
+- [Quel type d'actifs la PsyOptions supporte-t-elle?](#what-type-of-assets-does-psyoptions-support)
+- [Puis-je créer mes propres marchés sur PsyOptions ?](#can-i-create-my-own-markets-on-psyoptions)
+- [Comment les options sont-elles tarifées sur PsyOptions?](#how-are-options-priced-on-psyoptions)
+- [Pourquoi le rédacteur de l'option reçoit-il deux jetons séparés? Le contrat écrit n’est-il pas lié à l’option?](#why-does-the-option-writer-receive-two-separate-tokens-isnt-the-written-contract-tied-to-the-option)
+- [En quoi PsyOptions diffère-t-elle des autres protocoles d'options ?](#how-is-psyoptions-different-from-the-other-options-protocols-out-there)
 
-### What are options?
+### Que sont les options?
 
-Options are financial derivatives that give the buyer the right, but not the obligation, to buy or sell an underlying asset at an agreed upon price and date. More information can be found here: https://www.investopedia.com/terms/o/option.asp
+Les options sont des dérivés financiers qui donnent le droit à l'acheteur, mais pas l'obligation, acheter ou vendre un actif sous-jacent à un prix et une date convenus. Plus d'informations peuvent être trouvées ici : https://www.investopedia.com/terms/o/option.asp
 
-### Why did PsyOptions choose to build on Solana?
+### Pourquoi PsyOptions a-t-elle choisi de construire sur Solana?
 
-PsyOptions began with the goal to bring a TradFi feel to DeFi. With the launch of Serum, trading options on an orderbook was an actual possibility. The fast block times reduces time until settlement and allows traders to have orders placed, filled, or killed in a speed closest to that of a traditional exchange.
+PsyOptions a commencé avec l'objectif d'apporter une sensation de TradFi à DeFi. Avec le lancement de Sérum, les options de trading sur un carnet de commandes étaient une possibilité réelle. Les temps de blocage rapides réduisent le temps jusqu'à la liquidation et permettent aux traders d'avoir des ordres placés, rempli, ou tué dans une vitesse la plus proche de celle d'un échange traditionnel.
 
-### How will PsyOptions fit within the Solana Ecosystem?
+### Comment les PsyOptions s'intègreront-elles à l'écosystème Solana?
 
-PsyOptions V1 is the clearing and settlement layer for Options on Solana. With no external dependencies (i.e. oracles), options can be created for any SPL token over any duration in a completely trustless manner. This allows future protocols to integrate options into their programs in any manner they see fit.
+PsyOptions V1 est la couche de compensation et de règlement des options sur Solana. Sans dépendances externes (c'est-à-dire oracles), des options peuvent être créées pour n'importe quel jeton SPL sur n'importe quelle durée de manière totalement fiable. Cela permet aux protocoles futurs d'intégrer des options dans leurs programmes de la manière qu'ils jugent appropriée.
 
-We're open to helping any team looking to integrate options in their protocol or [use options to incentivize participation](https://medium.com/psyoptions/the-options-are-limitless-58dddbd28cb4).
+Nous sommes ouverts à toute équipe cherchant à intégrer des options dans leur protocole ou [utiliser des options pour encourager la participation](https://medium.com/psyoptions/the-options-are-limitless-58dddbd28cb4).
 
-### Does PsyOptions offer American or European style options?
+### PsyOptions offre-t-elle des options de style américain ou européen?
 
-PsyOptions offers American style option contracts.
+PsyOptions propose des contrats d'options de style américain.
 
-### Will there be an airdrop?
+### Y aura-t-il un parachutage?
 
-There is no airdrop planned at the moment. However, we have and will continue to update our community incentive programs.
+Il n'y a pas de parachute prévue pour le moment. Cependant, nous avons et continuerons de mettre à jour nos programmes d’incitation à la collectivité.
 
-### Does PsyOptions offer leverage?
+### PsyOptions offre-t-elle un effet de levier ?
 
-PsyOptions V1 does not offer leverage as the options are 100% collateralized when written. There may be external ways to get leverage in the future by composing with a lending protocol.
+PsyOptions V1 n’offre pas d’effet de levier car les options sont 100% collatéralisées lorsqu’elles sont écrites. Il peut y avoir des moyens externes pour obtenir un effet de levier à l'avenir en composant avec un protocole de prêt.
 
-### What type of assets does PsyOptions support?
+### Quel type d'actifs la PsyOptions supporte-t-elle?
 
-PsyOptions supports any and all SPL tokens!
+PsyOptions prend en charge tous les jetons SPL!
 
-### Can I create my own markets on PsyOptions?
+### Puis-je créer mes propres marchés sur PsyOptions ?
 
-Yes! Anyone can create new markets on the PsyOptions protocol.
+Oui ! Tout le monde peut créer de nouveaux marchés dans le protocole PsyOptions.
 
-### How are options priced on PsyOptions?
+### Comment les options sont-elles tarifées sur PsyOptions?
 
-PsyOptions makes no assumptions on price, and allows users to price how they want. Market makers on Serum will price options as they see fit.
+PsyOptions ne fait aucune hypothèse sur le prix, et permet aux utilisateurs de choisir le prix qu'ils veulent. Les acteurs du marché du sérum chercheront les options comme bon leur semble.
 
-### Why does the option writer receive two separate tokens? Isn’t the written contract tied to the option?
+### Pourquoi le rédacteur de l'option reçoit-il deux jetons séparés? Le contrat écrit n’est-il pas lié à l’option?
 
-The writer will receive one token that represents the option. This token allows the holder to exercise prior to the expiration and thus can be sold for a premium.
+L'auteur recevra un jeton qui représente l'option. Ce jeton permet au détenteur d'exercer avant l'expiration et peut donc être vendu pour une prime.
 
-The second token is the writer token. In TradFi a clearing house may keep track of who wrote a specific option. In a sense, these options would be nonfungible as they're tied to a specific person. The options must be fungible in order to compose with Serum order books, AMMs, and other protocols that require a quantity greater than one to be functional. So they're not tied to the option in any way.
+Le deuxième jeton est le jeton de l'écrivain. Dans TradFi, une chambre de compensation peut garder la trace de qui a écrit une option spécifique. En un sens, ces options ne sont pas foncibles, car elles sont liées à une personne en particulier. Les options doivent être fongibles afin de composer avec des carnets de commandes Sérum, AMMs, et d'autres protocoles qui nécessitent une quantité supérieure à un pour être fonctionnel. Ils ne sont donc en aucun cas liés à cette option.
 
-The writer token being fungible as well allows for some other interesting possibilities. It could allow a lending market to accept writer tokens as collateral for loans or an AMM could create pools with writer tokens so user's may sell their claim on the underlying asset.
+Le jeton de l'écrivain étant fungible aussi permet d'autres possibilités intéressantes. Cela pourrait permettre à un marché de prêt d'accepter des jetons d'écrivain comme garantie pour des prêts ou un AMM pourrait créer des pools avec des jetons d'écrivain afin que l'utilisateur puisse vendre sa réclamation sur l'actif sous-jacent.
 
-### How is PsyOptions different from the other options protocols out there?
+### En quoi PsyOptions diffère-t-elle des autres protocoles d'options ?
 
-PsyOptions is the “option factory” and settlement layer. The protocol makes no assumptions on price, allowing users to price how they want. The protocol also makes no assumptions on the size of option contracts. This makes PsyOptions flexible, composable, and allows others to build on top of it.
+PsyOptions est la « usine d'options » et la couche de règlement. Le protocole ne fait aucune hypothèse sur le prix, permettant aux utilisateurs de choisir le prix qu'ils veulent. Le protocole ne fait pas non plus d'hypothèses sur la taille des contrats d'options. Cela rend les PsyOptions flexibles, composables et permet aux autres de construire par-dessus elle.

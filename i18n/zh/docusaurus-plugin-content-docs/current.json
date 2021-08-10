@@ -1,26 +1,26 @@
 {
   "version.label": {
-    "message": "Suivant",
+    "message": "下一个",
     "description": "The label for version current"
   },
   "sidebar.someSidebar.category.Getting Started": {
-    "message": "Commencer",
+    "message": "正在开始",
     "description": "The label for category Getting Started in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Architecture Design": {
-    "message": "Conception d'architecture",
+    "message": "建筑设计",
     "description": "The label for category Architecture Design in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Amercian Style Protocol (V1)": {
-    "message": "Protocole de style Amercian (V1)",
+    "message": "Amercian 样式协议 (V1)",
     "description": "The label for category Amercian Style Protocol (V1) in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Program Integration": {
-    "message": "Intégration de programme",
+    "message": "方案集成",
     "description": "The label for category Program Integration in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Clients": {
-    "message": "Clients",
+    "message": "客户",
     "description": "The label for category Clients in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.JavaScript": {
@@ -28,11 +28,11 @@
     "description": "The label for category JavaScript in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Rust": {
-    "message": "Rouille",
+    "message": "赤色",
     "description": "The label for category Rust in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Designers": {
-    "message": "Designers",
+    "message": "设计师",
     "description": "The label for category Designers in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Devnet Testing": {
@@ -40,7 +40,7 @@
     "description": "The label for category Devnet Testing in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.PSY Token": {
-    "message": "Jeton PSY",
+    "message": "PSY 令牌",
     "description": "The label for category PSY Token in sidebar someSidebar"
   }
 }

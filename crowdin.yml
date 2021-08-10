@@ -1,6 +1,7 @@
-project_id: '467438'
+project_id: '1'
 api_token_env: 'CROWDIN_PERSONAL_TOKEN'
 preserve_hierarchy: true
+base_url: "https://psyoptions.crowdin.com"
 files: [
     # JSON translation files
     {
@@ -11,6 +12,10 @@ files: [
     {
       source: '/docs/**/*',
       translation: '/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%',
+      ignore: [
+        'docs/javascript-api.md',
+        'docs/javascript-gists.md',
+      ]
     },
     # Blog Markdown files
     {

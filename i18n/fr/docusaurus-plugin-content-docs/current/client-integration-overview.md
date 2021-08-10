@@ -1,13 +1,13 @@
 ---
 id: client-integration-overview
-title: Client Integration
-sidebar_label: Overview
+title: Intégration du client
+sidebar_label: Aperçu
 slug: /client-integration/overview
 ---
 
 
-## Public packages
+## Paquets publics
 
-Javascript instruction bindings can be found under [@mithraic-labs/psyoptions](https://www.npmjs.com/package/@mithraic-labs/psyoptions)
+Les bindings d'instructions Javascript peuvent être trouvés dans [@mithraic-labs/psyoptions](https://www.npmjs.com/package/@mithraic-labs/psyoptions)
 
-A Rust crate will be supported soon to help with Cross Program Invocations!
+Une caisse de rouille sera bientôt prise en charge pour aider avec les Invocations de programme croisé !

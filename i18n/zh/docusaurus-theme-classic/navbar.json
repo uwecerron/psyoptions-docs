@@ -1,14 +1,14 @@
 {
   "title": {
-    "message": "Options de la psychologie",
+    "message": "心理选项",
     "description": "The title in the navbar"
   },
   "item.label.Blog": {
-    "message": "Blogue",
+    "message": "博客",
     "description": "Navbar item with label Blog"
   },
   "item.label.App": {
-    "message": "Application",
+    "message": "应用",
     "description": "Navbar item with label App"
   },
   "item.label.GitHub": {

@@ -1,8 +1,8 @@
 ---
 id: rust-start
-title: Rust Quick Start
-sidebar_label: Quick Start
+title: Démarrage rapide de la rouille
+sidebar_label: Démarrage rapide
 slug: /client-integration/rust/quick-start
 ---
 
-## Coming soon
+## Bientôt disponible

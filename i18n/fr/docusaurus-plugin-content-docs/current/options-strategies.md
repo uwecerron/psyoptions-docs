@@ -1,30 +1,30 @@
 ---
 id: options-strategies
-title: Options Strategies
-sidebar_label: Options Strategies
+title: Stratégies d'options
+sidebar_label: Stratégies d'options
 slug: /options-strategies
 ---
 
-#### Expect price to go up
+#### Le prix attendu augmentera
 
-Buy a [Call](./glossary.md#call)
+Acheter un [Appel](./glossary.md#call)
 
-Sell a [Secured Put](./glossary.md#secured-put)
+Vendre un objet [placé sécurisé](./glossary.md#secured-put)
 
-#### Expect price to go down
+#### Attendez-vous à une baisse du prix
 
-Buy a [Put](./glossary.md#put)
+Achetez un [Mettez](./glossary.md#put)
 
-Sell a [Covered Call](./glossary.md#covered-call)
+Vendez un [appel couvert](./glossary.md#covered-call)
 
-#### Expect price to go up or down
+#### Attendez-vous à une hausse ou à une baisse du prix
 
-Straddle or strangle
+Straddle ou étranglement
 
-#### Expect price to stay the same
+#### Attendez-vous à ce que le prix reste identique
 
-Selling a [Covered Call](./glossary.md#covered-call)
+Vendre un [appel couvert](./glossary.md#covered-call)
 
-Selling a [Secured Put](./glossary.md#secured-put)
+Vendre un [Placement sécurisé](./glossary.md#secured-put)
 
-Calendar spread
+Écart du calendrier

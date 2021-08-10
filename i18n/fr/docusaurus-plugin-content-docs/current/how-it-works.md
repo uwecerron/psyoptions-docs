@@ -1,88 +1,88 @@
 ---
 id: american-how-it-works
-title: American Protocol V1 How It Works
-sidebar_label: How It Works
+title: Protocole américain V1 Comment ça marche
+sidebar_label: Comment ça marche
 slug: /american-v1/how-it-works
 ---
 
-To truly understand how the protocol and platform works, one needs to understand what's happening under the hood. Here we will do our best to break down each interaction an entity may make with the protocol and what's happening.
+Pour vraiment comprendre comment fonctionne le protocole et la plate-forme, il faut comprendre ce qui se passe sous le capot. Ici, nous ferons de notre mieux pour décomposer chaque interaction qu'une entité peut faire avec le protocole et ce qui se passe.
 
-## Initialize new options market
-![initialize market](/img/how-it-works/initialize_market_page.png)
+## Initialiser le marché des nouvelles options
+![initialiser le marché](/img/how-it-works/initialize_market_page.png)
 
-The protocol is designed to be a primitive, so it makes very little assumptions about options, how they should be traded, priced, etc. The protocol itself, also makes no assumptions on what assets should have options and which should not. It has been built with various use cases in mind, like writing contracts on NFTs, tokenized property deeds, tokenized stocks...anything that can be represented as an SPL Token can have an option market. Will there be liquidity on those markets is a topic for another discussion ;).
+Le protocole est conçu pour être une primitive, donc il fait très peu d'hypothèses sur les options, comment elles doivent être échangées, tarifiées, etc. Le protocole lui-même, ne fait pas non plus d'hypothèses sur les actifs qui devraient avoir des options et lesquelles ne devraient pas. Il a été construit avec divers cas d'utilisation dans l'esprit de , comme écrire des contrats sur des NFTs, des actions tokenisées de propriété, des actions jetées. .anything qui peut être représenté comme un jeton SPL peut avoir un marché d'options. Y aura-t-il de la liquidité sur ces marchés est un sujet pour une autre discussion ;).
 
-Option markets themselves are completely open and permissionless. If there are a pair of assets you want to write options one, you can create that market! To do so you need to use the `InitializeMarket` instruction. Each market is goverened by specific parameters that determine its fungibility. Those parameters include:
+Les marchés d'options eux-mêmes sont totalement ouverts et sans permission. S'il y a une paire d'actifs que vous voulez écrire des options une, vous pouvez créer ce marché ! Pour ce faire, vous devez utiliser les instructions `InitializeMarket`. Chaque marché est gouverné par des paramètres spécifiques qui déterminent sa fongibilité. Ces paramètres incluent:
 
 ````Rust
-pub struct OptionMarket {
-  ...
-    /// The SPL Token Address that is held in the program's pool when an option is written
+Pub struct OptionMarket {
+...
+    /// L'adresse du jeton SPL qui se trouve dans la réserve du programme quand une option est écrite
     pub underlying_asset_mint: Pubkey,
-    /// The SPL Token Address that denominates the strike price
-    pub quote_asset_mint: Pubkey,
-    /// The amount of the **underlying asset** that derives a single option
-    pub underlying_amount_per_contract: u64,
-    /// The amount of **quote asset** that must be transfered when an option is exercised
-    pub quote_amount_per_contract: u64,
-    /// The Unix timestamp **in seconds** at which the contracts in this market expire
-    pub expiration_unix_timestamp: UnixTimestamp,
-  ...
+    /// L'adresse du jeton SPL qui dénomme le prix de levée
+    quote_asset_ment: Pubkey,
+    /// Le montant de l'**actif sous-jacent** qui dérive une seule option
+    pub underlying_amount_per_contract : u64,
+    /// Le montant de **quote-actif** qui doit être transféré lorsqu'une option est exercée
+    guillemet pub : u64,
+    /// L'horodatage Unix **en secondes** où les contrats sur ce marché expirent
+    expiration_unix_timestamp: UnixTimestamp,
+...
 }
 ````
 
-It is important to note that the protocol uses deterministic addressing of markets, based on the unique parameters, so there can never be two of the exact same market. This was a concious decision of V1 to reduce the chance of fragmented liquidity.
+Il est important de noter que le protocole utilise une approche déterministe des marchés, basé sur les paramètres uniques, donc il ne peut jamais y avoir deux du même marché exact. Il s'agissait d'une décision maladroite de V1 de réduire les risques de fragmentation des liquidités.
 
-Creating a new market is extremely cheap and easy! When a new market is initialized a few things happen. The most important are the creation of the **Underlying Asset Pool** and the **Quote Asset Pool** for that market. These pools are unique to and owned by each individual market. When someone mints an option contract, their collateral is stored in these pools, more on that next.
+Créer un nouveau marché est extrêmement bon marché et facile ! Lorsqu'un nouveau marché est initialisé, quelques choses se produisent. Les plus importants sont la création du **pool d'actifs sous-jacents** et du pool d'actifs de **cote** pour ce marché. Ces piscines sont uniques à chaque marché individuel et sont la propriété de chacun. Quand quelqu'un frappe un contrat d'option, ses garanties sont stockées dans ces bassins, plus de à ce moment-là.
 
-## Minting an option
+## Mémoriser une option
 <!-- TODO show image of mint component -->
 
-Without a doubt, the most important and widely used instruction of the protocol. When you want to mint a contract for a given market you need the `MintCoveredCall` instruction. It is **extremely important to note** that although this instruction contains the phrase _Covered Call_ in the V1 protocol, all contracts can be considered covered calls. PUTs are simply the reciprical of the a CALL, and all of V1's markets require 100% collateral upfront. More can be read [here](./arch-put-call.md).
+Il ne fait aucun doute que l'instruction la plus importante et la plus largement utilisée du protocole. Lorsque vous voulez toucher un contrat pour un marché donné, vous avez besoin de l'instruction `MintCoveredCall`. Il est **extrêmement important de noter** que bien que cette instruction contienne la phrase _Appel couvert_ dans le protocole V1, tous les contrats peuvent être considérés comme des appels couverts. Les PUTs sont simplement les receveurs d'un CALL, et tous les marchés de V1 requièrent 100% de garantie à l'avance. Plus d'informations peuvent être lues [ici](./arch-put-call.md).
 
-To mint a contract, the contract writer must put up 100% of the `underlying_amount_per_contract` plus a 5bps minting fee. This small fee will got to the PsyOptions treasury and will be adjustable (or removable) via governance. So the total underlying assets required to mint 1 contract is:
+Pour toucher un contrat, le contractant doit mettre à 100 % du `underlying_amount_per_contract` plus des frais de 5 bps. Ce petit montant sera versé au trésor de PsyOptions et sera ajustable (ou amovible) via la gouvernance . Le total des actifs sous-jacents requis pour conclure un contrat est donc :
 
 `underlying_assets_required = underlying_amount_per_contract + (underlying_amount_per_contract * 0.0005)`
 
-These unserlying assets are then stored in the option markets' _Underlying Asset Pool_. If the transfer to the pool succeeds (i.e. enough underlying was posted), then the protocol mints the user 2 tokens, the **OptionToken** and the **WriterToken**.
+Ces actifs unserlying sont ensuite stockés dans le _pool d'actifs sous-jacents_ des marchés d'options. Si le transfert vers le pool réussit (i.e. assez de sous-jacent a été publié), puis le protocole met à jour l'utilisateur 2 jetons, le **OptionToken** et le **WriterToken**.
 
-The **OptionToken is the actual contract**, which gives the holder _the right but not the obligation to swap the quote assets for the underlying assets at the agreed upon strike price_. The OptionToken is an SPL Token, so it can be transfered or traded on any venue that has SPL Token support.
+Le **OptionToken est le contrat réel**, qui donne au détenteur _le droit mais pas l'obligation de swap les actifs cotés pour les actifs sous-jacents au prix d'exercice convenu_. Le OptionToken est un jeton SPL, donc il peut être transféré ou échangé sur n'importe quel lieu qui a le support du jeton SPL.
 
-The **WriterToken** denotes the holder is short the option or wrote the contract. Lets break that statement down into more logical terms. Given this is an American style contract the OptionToken holder can exercise at any point in time prior to expiration. So at any point (pre or post expiration) the WriterToken gives the holder the ability to claim the `quote_amount_per_contract` should anyone exercise and the Quote Asset Pool contains enough of a balance. Post expiration, the WriterToken gives the holder the ability to claim the `underlying_amount_per_contract` back from the Underlying Asset Pool.
+Le **WriterToken** indique que le titulaire est abrégé de l'option ou a écrit le contrat. Laisse séparer cette déclaration en termes plus logiques. Étant donné qu'il s'agit d'un contrat de style américain le titulaire de OptionToken peut exercer à tout moment avant l'expiration. Donc, à n'importe quel moment (avant ou après l'expiration) le WriterToken donne au détenteur la possibilité de réclamer le `quote_amount_per_contract` si n'importe qui exerce et que le pool d'actifs de cotation contient assez de solde. Après l'expiration du poste, le WriterToken donne au détenteur la possibilité de revendiquer le `sous-jacent_amount_per_contract` du sous-groupe d'actifs.
 
-So to generate yield from writing a contract, you would sell the OptionToken. That could be done OTC and transfered, on a Seurm market, or any other venue that creates and exchange for a market's SPLs.
+Ainsi, pour générer des rendements à partir de la rédaction d'un contrat, vous vendriez le OptionToken. Cela pourrait être fait en OTC et transféré, sur un marché Seurm, ou sur tout autre lieu qui crée et qui échange contre les SPL d'un marché.
 
-## Exercising a contract
+## Exercer un contrat
 <!-- TODO image of the exercise row -->
 
-With the OptionToken we have the ability to exercise the contract with the use of the `ExerciseCoveredCall` instruction. To exercise we must post the OptionToken held and the `quote_amount_per_contract` plus a 5bps fee. This small fee will got to the PsyOptions treasury and will be adjustable (or removable) via governance. So the total quote asset that must be posted is
+Avec le OptionToken, nous avons la possibilité d’exercer le contrat avec l’utilisation de l’instruction `ExerciseCoveredCall`. Pour exercer nous devons poster le OptionToken tenu et le `quote_amount_per_contract` plus un frais de 5bps. Cette petite somme sera versée au Trésor de PsyOptions et sera ajustable (ou amovible) par la gouvernance. Donc l'actif du devis total qui doit être publié est
 
 `quote_assets_required = quote_amount_per_contract + (quote_amount_per_contract * 0.0005)`
 
-With the correct amount posted, the protocol burns the OptionToken, transfers `quote_amount_per_contract` to the market's Quote Asset Pool, and transfers `underlying_amount_per_contract` to the exerciser's address.
+Avec le montant correct affiché, le protocole brûle le OptionToken, transfère `quote_amount_per_contract` au pool d'actifs de cotation du marché, et transfère `underlying_amount_per_contract` à l'adresse de l'exercice.
 
 
-Now that someone has exercised, we'll cover how a contract writer can claim those assets.
+Maintenant que quelqu'un a exercé, nous allons voir comment un auteur de contrat peut réclamer ces actifs.
 
-## Extracting assets from an exercised contract
+## Extraction d'actifs à partir d'un contrat exercé
 <!-- TODO image of a imbalanced pools -->
 
-Economic theories have proven that it is not beneficial to exercise a contract early. But this is not TradFi. The composability of PsyOptions American V1 provides many use cases outside of pure volatility trading, portfolio hedging, etc. where exercising early will most certainly happen. Lets take protocol XYZ that is running a liquidity mining program that incentivized new liquidity providers with At The Money (ATM) contracts that expire in 10 years. As long as project XYZ continues to grow, these contract holders will most cetainly exercise early.
+Les théories économiques ont prouvé qu’il n’est pas avantageux d’exercer un contrat plus tôt. Mais ce n'est pas TradFi. La composabilité de PsyOptions American V1 fournit de nombreux cas d'utilisation en dehors du trading de la pure volatilité, de la couverture de portefeuille, etc. où l'exercice précoce arrivera très certainement . Prenons le protocole XYZ qui exécute un programme d'extraction de liquidités qui a encouragé de nouveaux fournisseurs de liquidités avec des contrats At The Money (ATM) qui expirent dans 10 ans. Tant que le projet XYZ continue de croître, les détenteurs de ce contrat s'exerceront très tôt.
 
-Now when that early exercise occurs, the contract writer is able to claim the quote assets as soon as they are available. To do so, the contract writer must use the `ExchangeWriterTokenForQuote` instruction. The user most post the WriterToken. The protocol will burn the WriterToken and transfer the `quote_amount_per_contract` to the writer's wallet.
+Maintenant, lorsque cet exercice se produit, le rédacteur du contrat est en mesure de réclamer les actifs de cotation dès qu'ils sont disponibles. Pour ce faire, le contractant doit utiliser les instructions `ExchangeWriterTokenForQuote`. L'utilisateur le plus publie le WriterToken. le protocole va graver le WriterToken et transférer le `quote_amount_per_contract` au portefeuille de l'écrivain.
 
-A few items to note. First, this instruction can be called at any point in time, so long as there are enough quote assets in the Quote Asset Pool. Second, this instruction acts on a **first come, first serve basis**. All OptionTokens and WriterTokens for a given market are respectively fungible (i.e. Any OptionToken is the same as another for the given market. The same is true for the WriterToken.). So as soon as someone exercises an OptionContract **anyone holding a WriterToken for that market has a claim on the quote assets**.
+Quelques éléments à noter. Tout d'abord, cette instruction peut être appelée à tout moment dans le temps, tant que il y a suffisamment d'actifs de cotation dans le pool d'actifs de cotation. Deuxièmement, cette instruction agit sur un **premier arrivé, premier servi, base**. Tous les OptionTokens et WriterTokens pour un marché donné sont respectivement fongibles (i.e. N'importe quel OptionToken est le même qu'un autre pour le marché donné. Il en va de même pour le WriterToken.). Dès que quelqu'un exerce un contrat d'option **toute personne détenant un jeton sur ce marché a une réclamation sur les actifs de cotation**.
 
-## Getting your underlying back after expiration
+## Récupération de votre dos sous-jacent après expiration
 <!-- TODO image of full underlying asset pool, no quote -->
 
-After expiration, a contract writer has a claim on their original underlying assets that they posted to write the contract. **Only after expiration** can a WriterToken sent the protocol to be burned in exchange for the `underlying_amount_per_contract`. This is done through the `ClosePostExpiration` instruction.
+Après l'expiration d'un contrat, un auteur de contrat a une réclamation sur ses actifs sous-jacents d'origine qu'il a postée pour écrire le contrat. **Seulement aprčs l'expiration** un WriterToken peut envoyer le protocole ŕ brûler en échange du `souslying_amount_per_contract`. Ceci est fait par le biais de l'instruction `ClosePostExpiration`.
 
-## Closing a position pre-expiration
+## Fermeture d'une pré-expiration de position
 
-What happens if you wrote too many contracts at once? Or your exposure has changed and you need to close your position? This is where the `ClosePosition` instruction comes in. This instruction **requires you to have both the OptionToken and the WriterToken**. At anypoint (pre or post expiration) if a wallet calls this instruction with the correct token pair preset, it will receive the `underlying_amount_per_contract`. The protocol checks and burns both tokens and then transfersthe underlying assets from the pool to the wallet.
+Que se passe-t-il si vous avez écrit trop de contrats à la fois? Ou votre exposition a changé et vous avez besoin de pour fermer votre position ? C'est là que vient l'instruction `ClosePosition`. Cette instruction **nécessite que vous ayez à la fois le OptionToken et le WriterToken**. À tout moment (avant ou après l'expiration de ) si un portefeuille appelle cette instruction avec le préréglage de la paire de jetons correcte, il recevra le `sous-traitant_amount_per_contract`. Le protocole vérifie et brûle à la fois les jetons et puis transfère les actifs sous-jacents du pool vers le portefeuille.
 
-If you sold the OptionToken and would like to close your position, you will have to go to a venue that trades/sells the correct OptionToken and 
+Si vous avez vendu le OptionToken et souhaitez fermer votre position, vous devrez aller à un lieu qui négocie / vend le bon OptionToken et 
 
 
 
