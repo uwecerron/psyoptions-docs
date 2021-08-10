@@ -80,7 +80,7 @@ module.exports = {
   },
   i18n: {
     defaultLocale: 'en',
-    locales: ['en', 'fr'],
+    locales: ['en', 'fr', 'zh'],
   },
   presets: [
     [
