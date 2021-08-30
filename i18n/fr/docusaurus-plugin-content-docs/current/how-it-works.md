@@ -12,7 +12,7 @@ Pour vraiment comprendre comment fonctionne le protocole et la plate-forme, il f
 
 Le protocole est conçu pour être une primitive, donc il fait très peu d'hypothèses sur les options, comment elles doivent être échangées, tarifiées, etc. Le protocole lui-même, ne fait pas non plus d'hypothèses sur les actifs qui devraient avoir des options et lesquelles ne devraient pas. Il a été construit avec divers cas d'utilisation dans l'esprit de , comme écrire des contrats sur des NFTs, des actions tokenisées de propriété, des actions jetées. .anything qui peut être représenté comme un jeton SPL peut avoir un marché d'options. Y aura-t-il de la liquidité sur ces marchés est un sujet pour une autre discussion ;).
 
-Les marchés d'options eux-mêmes sont totalement ouverts et sans permission. S'il y a une paire d'actifs que vous voulez écrire des options une, vous pouvez créer ce marché ! Pour ce faire, vous devez utiliser les instructions `InitializeMarket`. Chaque marché est gouverné par des paramètres spécifiques qui déterminent sa fongibilité. Ces paramètres incluent:
+Les marchés d'options eux-mêmes sont totalement ouverts et sans permission. If there are a pair of assets you want to write options on, you can create that market! Pour ce faire, vous devez utiliser les instructions `InitializeMarket`. Chaque marché est gouverné par des paramètres spécifiques qui déterminent sa fongibilité. Ces paramètres incluent:
 
 ````Rust
 Pub struct OptionMarket {
@@ -40,7 +40,7 @@ Créer un nouveau marché est extrêmement bon marché et facile ! Lorsqu'un nou
 
 Il ne fait aucun doute que l'instruction la plus importante et la plus largement utilisée du protocole. Lorsque vous voulez toucher un contrat pour un marché donné, vous avez besoin de l'instruction `MintCoveredCall`. Il est **extrêmement important de noter** que bien que cette instruction contienne la phrase _Appel couvert_ dans le protocole V1, tous les contrats peuvent être considérés comme des appels couverts. Les PUTs sont simplement les receveurs d'un CALL, et tous les marchés de V1 requièrent 100% de garantie à l'avance. Plus d'informations peuvent être lues [ici](./arch-put-call.md).
 
-Pour toucher un contrat, le contractant doit mettre à 100 % du `underlying_amount_per_contract` plus des frais de 5 bps. Ce petit montant sera versé au trésor de PsyOptions et sera ajustable (ou amovible) via la gouvernance . Le total des actifs sous-jacents requis pour conclure un contrat est donc :
+Pour toucher un contrat, le contractant doit mettre à 100 % du `underlying_amount_per_contract` plus des frais de 5 bps. This small fee will go to the PsyOptions treasury and will be adjustable (or removable) via governance. Le total des actifs sous-jacents requis pour conclure un contrat est donc :
 
 `underlying_assets_required = underlying_amount_per_contract + (underlying_amount_per_contract * 0.0005)`
 
@@ -69,7 +69,7 @@ Maintenant que quelqu'un a exercé, nous allons voir comment un auteur de contra
 
 Les théories économiques ont prouvé qu’il n’est pas avantageux d’exercer un contrat plus tôt. Mais ce n'est pas TradFi. La composabilité de PsyOptions American V1 fournit de nombreux cas d'utilisation en dehors du trading de la pure volatilité, de la couverture de portefeuille, etc. où l'exercice précoce arrivera très certainement . Prenons le protocole XYZ qui exécute un programme d'extraction de liquidités qui a encouragé de nouveaux fournisseurs de liquidités avec des contrats At The Money (ATM) qui expirent dans 10 ans. Tant que le projet XYZ continue de croître, les détenteurs de ce contrat s'exerceront très tôt.
 
-Maintenant, lorsque cet exercice se produit, le rédacteur du contrat est en mesure de réclamer les actifs de cotation dès qu'ils sont disponibles. Pour ce faire, le contractant doit utiliser les instructions `ExchangeWriterTokenForQuote`. L'utilisateur le plus publie le WriterToken. le protocole va graver le WriterToken et transférer le `quote_amount_per_contract` au portefeuille de l'écrivain.
+Maintenant, lorsque cet exercice se produit, le rédacteur du contrat est en mesure de réclamer les actifs de cotation dès qu'ils sont disponibles. Pour ce faire, le contractant doit utiliser les instructions `ExchangeWriterTokenForQuote`. The user must post the WriterToken. le protocole va graver le WriterToken et transférer le `quote_amount_per_contract` au portefeuille de l'écrivain.
 
 Quelques éléments à noter. Tout d'abord, cette instruction peut être appelée à tout moment dans le temps, tant que il y a suffisamment d'actifs de cotation dans le pool d'actifs de cotation. Deuxièmement, cette instruction agit sur un **premier arrivé, premier servi, base**. Tous les OptionTokens et WriterTokens pour un marché donné sont respectivement fongibles (i.e. N'importe quel OptionToken est le même qu'un autre pour le marché donné. Il en va de même pour le WriterToken.). Dès que quelqu'un exerce un contrat d'option **toute personne détenant un jeton sur ce marché a une réclamation sur les actifs de cotation**.
 
@@ -82,8 +82,4 @@ Après l'expiration d'un contrat, un auteur de contrat a une réclamation sur se
 
 Que se passe-t-il si vous avez écrit trop de contrats à la fois? Ou votre exposition a changé et vous avez besoin de pour fermer votre position ? C'est là que vient l'instruction `ClosePosition`. Cette instruction **nécessite que vous ayez à la fois le OptionToken et le WriterToken**. À tout moment (avant ou après l'expiration de ) si un portefeuille appelle cette instruction avec le préréglage de la paire de jetons correcte, il recevra le `sous-traitant_amount_per_contract`. Le protocole vérifie et brûle à la fois les jetons et puis transfère les actifs sous-jacents du pool vers le portefeuille.
 
-Si vous avez vendu le OptionToken et souhaitez fermer votre position, vous devrez aller à un lieu qui négocie / vend le bon OptionToken et 
-
-
-
-
+If you sold the OptionToken and would like to close your position, you will have to go to a venue that trades/sells the correct OptionToken and purchase one there.

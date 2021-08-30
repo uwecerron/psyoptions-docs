@@ -20,7 +20,7 @@ that can be represented as an SPL Token can have an option market. Will there be
 on those markets is a topic for another discussion ;).
 
 Option markets themselves are completely open and permissionless. If there are a pair of assets
-you want to write options one, you can create that market! To do so you need to use the 
+you want to write options on, you can create that market! To do so you need to use the 
 `InitializeMarket` instruction. Each market is goverened by specific parameters that determine 
 its fungibility. Those parameters include:
 
@@ -62,7 +62,7 @@ of the a CALL, and all of V1's markets require 100% collateral upfront. More can
 [here](./arch-put-call.md).
 
 To mint a contract, the contract writer must put up 100% of the `underlying_amount_per_contract` 
-plus a 5bps minting fee. This small fee will got to the PsyOptions treasury and will be adjustable (or removable) via 
+plus a 5bps minting fee. This small fee will go to the PsyOptions treasury and will be adjustable (or removable) via 
 governance. So the total underlying assets required to mint 1 contract is:
 
 `underlying_assets_required = underlying_amount_per_contract + (underlying_amount_per_contract * 0.0005)`
@@ -119,7 +119,7 @@ cetainly exercise early.
 
 Now when that early exercise occurs, the contract writer is able to claim the quote assets 
 as soon as they are available. To do so, the contract writer must use the 
-`ExchangeWriterTokenForQuote` instruction. The user most post the WriterToken. The 
+`ExchangeWriterTokenForQuote` instruction. The user must post the WriterToken. The 
 protocol will burn the WriterToken and transfer the `quote_amount_per_contract` to the
 writer's wallet. 
 
@@ -148,8 +148,4 @@ receive the `underlying_amount_per_contract`. The protocol checks and burns both
 then transfersthe underlying assets from the pool to the wallet. 
 
 If you sold the OptionToken and would like to close your position, you will have to go to a venue
-that trades/sells the correct OptionToken and 
-
-
-
-
+that trades/sells the correct OptionToken and purchase one there.

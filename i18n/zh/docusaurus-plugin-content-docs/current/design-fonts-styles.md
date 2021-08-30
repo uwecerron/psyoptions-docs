@@ -1,22 +1,25 @@
 ---
 id: design-fonts-styles
-title: 字体和样式
-sidebar_label: 字体和样式
+title: 字體和樣式
+sidebar_label: 字體和樣式
 slug: /fonts-and-styles
 ---
 
-心理选项界通过创建心理选项主题设计，表现出设计技能的热情， 并为了帮助满足这个过程，我们已决定在这个设计页面上填写将这些社区设计提高到下一级所需的所有必要物品。 下面你会找到我们不同的徽标的 SVG 文件和我们在整个产品中使用的多个字体。
+事實證明 PsyOptions 社群熱衷於透過創作 PsyOptions 主題來展示他們的設計能力，為了滿足社群的需求，我們決定在此設計頁面中加入所有設計時需要的素材讓社群把設計才華提升到另一個新水平。 你將在下方找到我們不同Logo的 SVG 檔案，以及我們在整個產品中使用的多種字體。
 
-#### PsyOptions 标志
-我们有几种不同的徽标变量，可以用于您的设计过程。 你们大家都知道和喜爱的第一个人和第二人出现在我们网站的首页。
+#### PsyOptions Logo
+我們有幾種不同的Logo樣式讓你根據你的設計選用。 一個是你們都知道也熱愛的主要Logo，以及出現在我們網站首頁上的第二種Logo。
 
-![心血机](/img/PsyOps.svg) ![次要文件](/img/Secondary.svg)
+![PsyOps](/img/PsyOps.svg) ![第二張](/img/Secondary.svg)
 
-#### 心情选项字体
-对于我们的头部，我们在所有的帽子中使用金人字体。 我们还使用这个字体为我们的徽标，正确的大写方式为“Psyches”。
+#### PsyOptions Colors
+The following hexadecimal color codes are the official PsyOptions colors. ![colors](/img/designers/PsyOptionsColors.png)
 
-![金兵](/img/designers/goldman.png)
+#### PsyOptions 字體
+我們的標題是使用全大寫的 Goldman 字體。 我們也使用這種字體作為我們的Logo，正確的大寫方式是“PsyOptions”。
 
-对于我们头部以外的任何东西，我们使用的字体重为500。 这个字体也可以用于头部，字体重为700或800。 然而，这个字体不应用于标志文本。
+![goldman字體](/img/designers/goldman.png)
 
-![manrope](/img/designers/manrope.png)
+標題之外的所有內容，我們使用字體粗細為 500 的 Manrope 字體。 此字體也可用於字體粗細為 700 或 800 的標題，但是此字體不適用於Logo文字。
+
+![manrope字體](/img/designers/manrope.png)

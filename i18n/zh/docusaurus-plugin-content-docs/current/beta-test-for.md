@@ -1,49 +1,49 @@
 ---
 id: beta-test-for
-title: 测试内容
-sidebar_label: 测试内容
-slug: /devnet-testing/what to test
+title: 測試內容
+sidebar_label: 測試內容
+slug: /devnet-testing/what-to-test
 ---
 
-感谢您加入 PsyOptions beta 测试！
+感謝你參與 PsyOptions beta 測試！
 
-我们很高兴分享我们迄今已经建立的东西，并期待着社区的反馈。 随着测试的继续，这里有一些我们热衷于听到的反馈。
+我們很高興能夠分享我們迄今為止所構建的內容，並期待未來的社群意見回饋。 隨著測試的進行，以下是我們希望聽到的一些類型的回饋意見。
 
-## 事情要做！
+## 需要做的事情!
 
-### 基础知识
+### 基本知識
 
-1. 写下 [个覆盖的 CALL](https://www.investopedia.com/terms/c/coveredcall.asp)
-2. 写一个 [现金担保PUT](https://www.investopedia.com/trading/introduction-to-put-writing/)
-3. 从订单簿中购买合同
-4. 行使合同
-5. 写一个覆盖的合约，然后尽早关闭您的位置
+1. 寫一個[掩護性看漲期權 (Covered Call)](https://www.investopedia.com/terms/c/coveredcall.asp)
+2. 寫一個[現金擔保看跌期權 (Secured Put)](https://www.investopedia.com/trading/introduction-to-put-writing/)
+3. 從訂單簿購買合約
+4. 執行合約
+5. 寫一個掩護性合約，然後提前平倉
 
-### 高级版
+### 進階知識
 
-1. 创建一个新的选项市场
-2. 初始化新选项市场的血清市场
+1. 創建一個新的期權市場
+2. 為新的期權市場創建一個Serum市場
 
-## 需要考虑的反馈
+## 需要意見回饋的部分
 
-### 用户界面/用户体验
+### 使用者介面/使用者體驗
 
-- 导航站点时是否自我解释？
-- 交易选项有哪些改进领域？
-- 在启动备选办法市场方面有哪些改进领域？
-- 是明确了如何行使或关闭立场？
+- 網站的介面是否一目了然？
+- 交易期權的部分有任何需要改進的地方嗎？
+- 創建期權市場的部分有任何需要改進的地方嗎？
+- 如何行權或平倉的功能是否明顯易懂？
 
 ### 功能
 
-- 购买选项是否反映在您的钱包中？
-- 您是否能够察觉和出售选项？
-- 您是否可以练习或关闭从 `开放位置` 页面的位置？
+- 購買期權會反映在你的錢包中嗎？
+- 你能鑄造和出售期權嗎？
+- 你可以從 `Open Positions` 頁面行權或平倉嗎？
 
 ### 新功能
-您想在体验产品后看到什么样的功能？
+體驗產品後，你會希望看到什麼樣的功能？
 
-## 如何提供反馈
+## 如何提供意見回饋
 
-* [错误或建议](https://docs.google.com/forms/d/1Wpk_PYRCJLaMMsWvrIyvKq8sBFKYDCmajsDaLV_giEc)
-* [Discord](https://t.co/T28cJeQvS7?amp=1) 加入功能请求频道中的对话！
+* [錯誤或建議](https://docs.google.com/forms/d/1Wpk_PYRCJLaMMsWvrIyvKq8sBFKYDCmajsDaLV_giEc)
+* 加入[Discord](https://t.co/T28cJeQvS7?amp=1)的新功能許願頻道
 

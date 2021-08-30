@@ -1,89 +1,86 @@
 ---
 id: american-how-it-works
-title: 美国议定书 V1 如何工作
-sidebar_label: 如何工作
+title: 美式期權 v1 - 運作方式
+sidebar_label: 運作方式
 slug: /american-v1/how-it-works
 ---
 
-为了真正了解协议和平台的运作方式，人们需要了解场地下 发生了什么。 在这里，我们将尽最大努力打破一个 可能与协议和发生什么的实体之间的每一次交互。
+要真正了解協議和平台的運作原理，需要先了解其背後的本質。 在這裡我們會盡量分解個體與協議的每一個互動的步驟和正在發生的事情
 
-## 初始化新选项市场
-![初始化市场](/img/how-it-works/initialize_market_page.png)
+## 初始化新的期權市場
+![initialize market](/img/how-it-works/initialize_market_page.png)
 
-协议旨在成为一个原始协议，所以它对选项、 它们应该如何交易、定价等几乎没有什么假设。 协议本身也没有假定 资产应该有哪些选择，而哪些不应该有选择。 它是在 的心灵中用不同的案例构建的，如在NFT上编写合同、令牌化属性契约、令牌化库存。 。可以表示为 SPL Token 的 可以有一个选项市场。 这些市场上会有流动资金 是另一个讨论的主题；)。
+協議被設計為一種原始協議，因此它對期權、應該如何交易和定價等做出的假設很少。 協議本身也沒有假設哪些資產應該有期權，哪些不應該有期權。 它是以各種使用例子為前提去開發的，比如在 NFT 上寫合約、代幣化的財產契約、代幣化的股票…任何東西可以用 SPL 代幣代表的都可以有一個期權市場。 這些市場是否有流動性則又是另一個討論的話題；）。
 
-选择市场本身是完全开放和没有许可的。 如果有一对素材 你想要写选项，你可以创建这个市场！ 要做到这一点，您需要使用 `初始化Market` 说明。 每个市场都以决定 其可互换性的特定参数为目标。 这些参数包括：
+期權市場本身是完全開放且無許可的。 If there are a pair of assets you want to write options on, you can create that market! 為此，你需要使用 `初始化市場(InitializeMarket)` 指令。 每個市場都由決定其可替代性的特定參數控制。 這些參數包括：
 
 ````Rust
-pub struct OptionMarket
-...
-    /// 当一个选项被写入
-    pub 下方时在程序池中持有的 SPL 令牌地址：Pubkey,
-    /// 标注攻击价格的SPL 令牌地址
+pub struct OptionMarket {
+  ...
+    /// 寫入期權合約時保存在程式池中的 SPL Token 地址
+    pub underlying_asset_mint: Pubkey,
+    /// 指定執行價格的 SPL 代幣地址
     pub quote_asset_mint: Pubkey,
-    /// 产生单一选项的 **基础资产** 的金额
-    下面的 pub 金额：u64。
-    /// 行使选项时必须转移的 **引用资产** 的金额
+    /// 衍生單一期權的**標的資產**數量
+    pub underlying_amount_per_contract: u64,
+    /// 期權行權時必須轉移的**引用資產**數量
     pub quote_amount_per_contract: u64,
-    /// Unix timestamp **以秒为单位** 该市场中的合同到期
+    /// 該市場合約到期的 Unix 時間戳記**以秒為單位**
     pub expiration_unix_timestamp: UnixTimestamp,
-...
+  ...
 }
 ````
 
-必须指出的是，议定书使用了市场决定性的解决方法。 基于 的独特参数，所以永远不会有两个完全相同的市场。 This was a concious decision of V1 to reduce the chance of fragmented liquidity.
+值得注意的是協議使用市場決定性的解決方法，根據特別的參數，所以永遠不可能有兩個完全相同的市場。 這是一個有目的性的V1 決定以減少流動性分散的機會。
 
-创建一个新的市场非常便宜和容易！ 当一个新市场初始化几件事时 发生。 最重要的是为该市场创建 **个基础资产池** 和 **报价资产池** 这些集合是每个人 市场独特和拥有的。 当有人打破选项合约时，他们的抵押品被存储在这些池中，下次会有更多的 。
+創建一個新市場非常便宜和容易！ 當一個新市場被初始化時，會發生一些事情。 最重要的是為該市場創建**標的資產池**和**引用資產池**。 這些池都是獨特的並歸於每個個體市場。 當有人創建期權合約時，他們的抵押品會儲存到這些池中，接下來會詳細介紹
 
-## 正在输入选项
+## 鑄造期權
 <!-- TODO show image of mint component -->
 
-毫无疑问，议定书中最重要和最广泛使用的指示。 当您想要 为特定市场创建一个合约时，您需要 `MintCoveredCall` 指令。 **极其重要的注意** 虽然这个说明包含了V1协议中的短语 _覆盖调用_ 。 所有合同都可以被视为有担保的电话。 PUT完全是CALL的 累犯，V1的所有市场都需要100%的前期抵押。 更多信息可以在这里阅读 [](./arch-put-call.md)
+毫無疑問是協議中最重要和最廣泛使用的指令。 當你想要為給定市場創建合約，你需要 `MintCoveredCall(鑄造掩護性看漲期權)` 指令。 **非常重要的注意事項**，儘管此說明包含_掩護性看漲期權_ 的術語在 V1 協議中，所有合約都可以視為掩護性看漲期權。 看跌(Put) 只是 看漲(Call) 的相反，V1 的所有市場都預先需要 100% 的抵押品。 可以在[這裡](./arch-put-call.md)閱讀更多。
 
-要想创建一个合同，合同作者必须拿起 `低于下限的金额_per_contract` 加上5bps 采矿费。 这笔小笔费用将会付给PsyOptions 金库，并且可以通过 施政来调整(或可移除)。 因此设定1项合同所需的基本资产总额是：
+要創建合約，合約作者必須提供 100% 的 `underlying_amount_per_contract(標的資產)`加上 5bps 的鑄幣費。 This small fee will go to the PsyOptions treasury and will be adjustable (or removable) via governance. 因此鑄造 1 個合約所需的總標的資產為：
 
-`underlying_assets_required = underlying_amount_per_contract + (underlying_amount_per_contract * 0.0005)`
+`underlying_assets_required(需要的標的資產) = underlying_amount_per_contract(標的資產) + (underlying_amount_per_contract(標的資產) * 0.0005)`
 
-这些未支配资产然后存储在选项市场的 _基础资产库_ 中。 如果 转移到资源库成功(即) 已经发布了足够的底层，然后协议 将用户2标记, **可选令牌** 和 **作者令牌**
+然後這些標的資產將被存在期權市場的_標的資產池_中。 如果轉移到礦池成功（例如: 存了足夠多的標的資產），協議則會 鑄造2 個代幣給用戶 ，**期權代幣** 和 **賣家代幣**。
 
-The **OptionToken is the actual contract**, which gives the holder _the right but not the obligation to swap the quote assets for the underlying assets at the agreed upon strike price_. OptionToken 是一个 SPL Token，所以它可以在 上被转移或交易任何支持SPL Token 的地点。
+**期權代幣是實際合約**，它賦予持有者_在約定的執行價格將引用資產換成標的資產的權利但沒有義務 _。 期權代幣是一種 SPL 代幣，因此可以在任何支持 SPL 代幣的場所進行轉讓或交易。
 
-**作者令牌** 表示持有人是短暂的选项或写了合同。 让 将该语句分解成更符合逻辑的术语。 如果这是美国风格的合同 ，任选令牌持有人可以在到期前的任何时间进行练习。 So at any point (pre or post expiration) the WriterToken gives the holder the ability to claim the `quote_amount_per_contract` should anyone exercise and the Quote Asset Pool contains enough of a balance. 后期失效，作家令牌让持有者能够从 从底层资产池返回 `underlying_amount_per_contract`
+**賣家代幣** 表示持有者做空期權或寫了合約。 讓我們將這句話分解為更符合邏輯的說法。 由於這是一份美式合約 期權代幣 持有者可以在到期前的任何時間點行權。 因此在任何時候（到期前或到期後），賣家代幣 都使持有者能夠認領`quote_amount_per_contract(引用資產)` 如果任何人行權並且引用資產池有足夠的資金。 到期後，賣家代幣 使持有者能夠從標的資產池中領回 `underlying_amount_per_contract(標的資產)`。
 
-为了从写入合同中生成收益，您会出售OptionToken。 这可以在Seurm市场或任何其他能够产生 和交换市场苏人解的地点做到的。
+因此要通過編寫合約產生收益，你可以出售 期權代幣。 這可以在場外交易和轉移，在Serum市場或任何其他創造和交換市場 SPL 的場所。
 
-## 履行合同
+## 行使期權
 <!-- TODO image of the exercise row -->
 
-使用 OptionToken 我们可以使用 `ExerecuiseCoveredCall` 指令来执行合同。 To exercise we must post the OptionToken held and the `quote_amount_per_contract` plus a 5bps fee. 这个小笔费用将会付给PsyOptions 金库，并且可以通过管理进行调整(或可移除)。 所以必须发布的总报价 资产总额是
+通過 期權代幣，我們可以使用 `ExerciseCoveredCall(行使期權)
+` 指令來執行合約。 要行使我們必須發布持有的 期權代幣 和 `quote_amount_per_contract(引用資產)` 加上 5bps 的費用。 這筆小額費用將進入 PsyOptions 金庫，並可通過治理進行調整（或移除）。 所以必須發布的總引用資產是
 
-`quote_assets_required = quote_amount_per_contract + (quote_amount_per_contract * 0.0005)`
+`quote_assets_required(需要的引用資產) = quote_amount_per_contract(引用資產) + (quote_amount_per_contract(引用資產) * 0.0005)`
 
-使用正确的金额，协议烧毁了选项令牌，将 `quote_amount_per_contract` 转到市场的报价资产池， 和转账 `转入练习者地址的底层金额`
+發布正確的金額後，協議會銷毀 期權代幣，轉移 `quote_amount_per_contract(引用資產)` 到市場的引用資產池，並轉帳 `underlying_amount_per_contract(標的資產)` 到行權者的地址。
 
 
-既然有人已经练习了，我们会讨论合同作者如何能够要求这些资产。
+既然有人已經行權了，我們將介紹合約作者如何認領這些資產。
 
-## 从行使合同中提取资产
+## 從已行權的合約中提取資產
 <!-- TODO image of a imbalanced pools -->
 
-经济理论已经证明，提早履行合同是无益的。 但 这不是交易法。 美国V1心理选项的可混成性提供了许多使用案例 不包括纯易挥发性交易、组合套期保值等。 在那里执行早期的意愿 肯定会发生。 Lets take protocol XYZ that is running a liquidity mining program that incentivized new liquidity providers with At The Money (ATM) contracts that expire in 10 years. As long as project XYZ continues to grow, these contract holders will most cetainly exercise early.
+經濟理論已經證明過早行使合約是沒有好處的。 但這不是傳統金融。 PsyOptions 美式V1 的可組合性提供了純波動率交易、投資組合對沖等之外的許多使用例子，在這些例子中，儘早行權肯定會發生。 讓我們以運行流動性挖掘程式的協議 XYZ 為例，該程式通過 10 年後到期的 價平 (At The Money) 合約獎勵新的流動性提供者。 只要 XYZ 項目繼續成長，這些合約持有者肯定會提早行權。
 
-现在，在这种早期练习发生后，合同撰写人能够一旦获得报价资产 。 要这样做，合同写作者必须使用 `ExchangeWriterTokenForQuote` 指令。 用户最多发布作家令牌。 协议将烧毁作家令牌并将 `quote_amount_per_contract` 转到 作家的钱包。
+當提早行權發生時，合約作者能夠在引用資產可用時立即領取。 To do so, the contract writer must use the `ExchangeWriterTokenForQuote` instruction. The user must post the WriterToken. 協議將燒毀 賣家代幣 並將 `quote_amount_per_contract(引用資產)` 轉移到合約作者的錢包。
 
-有几个项目需要注意。 First, this instruction can be called at any point in time, so long as there are enough quote assets in the Quote Asset Pool. Second, this instruction acts on a **first come, first serve basis**. 给定的 市场的所有可选令牌和作家令牌都是可互换的 (即) 任何可选代币与 给定市场的另一个代币相同。 作家令牌的情况也是一样的。 一旦有人练习 可选合同 **，任何持有该市场的作家令牌的人都会在报价资产上拥有索偿权**
+需要注意的幾個事項。 首先，這指令可以隨時調用，只要引用資產池中有足夠的引用資產即可。 其次，這指令是採用**先到先得**。 All OptionTokens and WriterTokens for a given market are respectively fungible (i.e. Any OptionToken is the same as another for the given market. The same is true for the WriterToken.). So as soon as someone exercises an OptionContract **anyone holding a WriterToken for that market has a claim on the quote assets**.
 
-## 在过期后返回您的背包
+## Getting your underlying back after expiration
 <!-- TODO image of full underlying asset pool, no quote -->
 
-合同写作者在合同到期后对原来的基本资产提出了要求，即 张贴以写入合同。 **只有在过期了** 之后，作家令牌才能发送协议 以换取 `下游_amount_per_contract`。 这是通过 `ClosePostexpiration` 说明完成的。
+After expiration, a contract writer has a claim on their original underlying assets that they posted to write the contract. **Only after expiration** can a WriterToken sent the protocol to be burned in exchange for the `underlying_amount_per_contract`. This is done through the `ClosePostExpiration` instruction.
 
-## 关闭预到期的仓位
+## 到期前平倉
 
-如果您同时写了太多的合约，会发生什么情况？ 或者您的曝光已经改变，您需要 来关闭您的位置？ 这是 `关闭位置` 指令的所在地。 此指令 **要求您同时拥有可选令牌和作家令牌**。 At anypoint (pre or post expiration) if a wallet calls this instruction with the correct token pair preset, it will receive the `underlying_amount_per_contract`. 协议检查并烧毁令牌，然后 将基础资产从池转移到钱包。
+如果你一次寫了太多合約會怎樣？ 或者你的資產分配方式已經改變了而你需要平倉？ 這就是 `ClosePosition(平倉)` 指令的使用之處。 此說明**要求你同時擁有 期權代幣 和 賣家代幣**。 At anypoint (pre or post expiration) if a wallet calls this instruction with the correct token pair preset, it will receive the `underlying_amount_per_contract`. The protocol checks and burns both tokens and then transfersthe underlying assets from the pool to the wallet.
 
-如果您出售了可选令牌并想要关闭您的位置， 您必须去一个交易/销售正确的选项令牌和 的地点 
-
-
-
-
+If you sold the OptionToken and would like to close your position, you will have to go to a venue that trades/sells the correct OptionToken and purchase one there.

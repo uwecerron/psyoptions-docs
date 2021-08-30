@@ -1,8 +1,8 @@
 ---
 id: rust-start
-title: Rust 快速开始
-sidebar_label: 快速开始
+title: Rust 快速上手
+sidebar_label: 快速上手
 slug: /client-integration/rust/quick-start
 ---
 
-## 即将开始
+## 即將推出
