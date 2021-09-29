@@ -14,7 +14,7 @@ files: [
       translation: '/i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%',
       ignore: [
         'docs/javascript-api.md',
-        'docs/javascript-gists.md',
+        'docs/javascript-api/**/*'
       ]
     },
     # Blog Markdown files

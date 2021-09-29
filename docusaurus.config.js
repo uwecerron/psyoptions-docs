@@ -99,4 +99,21 @@ module.exports = {
       },
     ],
   ],
+  plugins: [
+    [
+      'docusaurus-plugin-typedoc',
+      // Plugin / TypeDoc options
+      {
+        entryPoints: ['../psyoptions-ts/packages/psy-american/src/index.ts'],
+        tsconfig: '../psyoptions-ts/packages/psy-american/tsconfig.json',
+        // Plugin options
+        out: 'javascript-api',
+        sidebar: {
+          categoryLabel: 'JavascriptApi',
+          position: 0,
+          fullNames: true
+        },
+      },
+    ],
+  ],
 };
