@@ -9,9 +9,9 @@ slug: /options-strategies
 
 買 [看漲期權](./glossary.md#call)
 
-賣 [擔保看跌期權 (Secured Put)](./glossary.md#secured-put)
+賣 [擔保看跌期權](./glossary.md#secured-put)
 
-Execute a [Bull Call Spread](./glossary.md#bull-call-spread)
+執行 [買權多頭價差](./glossary.md#bull-call-spread)
 
 #### 預期價格會下跌
 
@@ -19,15 +19,15 @@ Execute a [Bull Call Spread](./glossary.md#bull-call-spread)
 
 賣 [ 掩護性看漲期權 (Covered Call) ](./glossary.md#covered-call)
 
-Execute a [Bear Put Spread](./glossary.md#bear-put-spread)
+執行 [賣權空頭價差](./glossary.md#bear-put-spread)
 
 #### 預期價格會上下震動
 
-Execute a [Protective Collar](./glossary.md#protective-collar)
+執行 [保護期權固定波幅 ](./glossary.md#protective-collar)
 
-Execute a [Long Straddle](./glossary.md#long-straddle)
+執行 [做多跨式期權](./glossary.md#long-straddle)
 
-Execute a [Long Strangle](./glossary.md#long-strangle)
+執行 [做多勒式期權](./glossary.md#long-strangle)
 
 #### 預期價格會維持不變
 
@@ -35,5 +35,5 @@ Execute a [Long Strangle](./glossary.md#long-strangle)
 
 賣 [擔保看跌期權 (Secured Put) ](./glossary.md#secured-put)
 
-Execute a [Long Call Butterfly Spread](./glossary.md#long-call-butterfly-spread)
+執行 [做多看漲蝶式價差](./glossary.md#long-call-butterfly-spread)
 

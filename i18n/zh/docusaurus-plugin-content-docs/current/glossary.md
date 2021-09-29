@@ -6,27 +6,27 @@ slug: /glossary
 ---
 
 #### 期權
-An option is a contract that gives the owner the right to buy (in the case of a [call](#call)) or sell (in the case of a [put](#put)) a number of the [underlying asset](#underlying-asset) at a predetermined price ([strike price](#strike-price)) on or before a fixed [expiration](#expiration) date.
+期權是一種合約，它賦予所有者在固定的[到期](#expiration)日期或之前以預定價格（[行使價](#strike-price)）購買（在[看漲](#call)的情況下）或出售（在[看跌](#put)的情況下）一定數量的[標的資產](#underlying-asset)。
 
 #### 看漲
-Buyers of call options generally expect the [underlying asset](#underlying-asset) to increase in value, whereas sellers of calls expect a decrease in value or for the value to remain the same.
+看漲期權的買家通常期望[標的資產](#underlying-asset)的價值增加，而看漲期權的賣家則期望價值下降或價值保持不變。
 
-Buying a call gives you the right, but not the obligation, to buy the [contract size](#contract-size) amount of the underlying asset at the option's [strike price](#strike-price). The value of a call option should increase as the price of the underlying asset increases.
+買入看漲期權賦予你以期權的[執行價格](#strike-price)購買[合約大小](#contract-size)的標的資產的權利，但不是義務。 看漲期權的價值應該隨著標的資產價格的上漲而增加。
 
-Writing a [covered call](#covered-call) option allows you to collect the premium while obligating you to sell the contract size amount of the underlying asset to the owner at the agreed-upon strike price if the owner of the contract chooses to exercise the contract.
+編寫一個[掩護性看漲](#covered-call)期權 (Covered Call)，你可以收取溢價，同時如果合約持有人選擇行使合約，你有義務以預定的執行價格向期權持有者出售合約規模的標的資產。
 
 #### 看跌
-Buyers of put options generally expect the [underlying asset](#underlying-asset) to decrease in value, whereas sellers of puts expect an increase in value or for the value to remain the same.
+看跌期權的買家通常期望[標的資產](#underlying-asset)價值下降，而看跌期權的賣家則期望價值增加或價值保持不變。
 
-購買看跌期權賦予你以期權的執行價格出售[合約大小](#contract-size)數量的標的資產的權利，但沒有義務。 The value of the put option should increase as the price of the underlying asset decreases.
+購買看跌期權賦予你以期權的執行價格出售[合約大小](#contract-size)數量的標的資產的權利，但沒有義務。 看跌期權的價值會隨著標的資產價格的下降而上漲。
 
-Writing a [secured put](#secured-put) option allows you to collect the premium while obligating you to buy a contract size amount of the underlying asset from the owner at the agreed-upon strike price if the owner of the contract chooses to exercise the contract.
+編寫一個[擔保看跌](#secured-put)期權 (Secured Put)，你可以收取溢價，同時如果合約持有人選擇行使合約，你有義務以預定的執行價格向期權持有者出售合約規模的標的資產。
 
 #### 掩護性看漲期權 (Covered Call)
-An option strategy executed by selling a call option while holding the same [underlying asset](#underlying-asset). This strategy is generally used if you expect the underlying asset price to stay relatively flat or increase moderately. 例如: 你將鑄造/出售 1 個 SOL/USDC 看漲期權，同時鎖定 100 個 SOL 作為 [合約大小](#contract-size) 為 100 的看漲期權的抵押品。
+通過持有相同的[標的資產](#underlying-asset)的同時賣出看漲期權來執行的期權策略。 如果你預計標的資產價格會保持相對平穩或適度上漲，通常會使用此策略。 例如: 你將鑄造/出售 1 個 SOL/USDC 看漲期權，同時鎖定 100 個 SOL 作為 [合約大小](#contract-size) 為 100 的看漲期權的抵押品。
 
 #### 擔保看跌期權 (Secured Put)
-An option strategy composed of selling a [put](#put) option while retaining enough cash to purchase the [underlying asset](#underlying-asset) if the option contract is executed by it's buyer. This strategy is generally used if you are bearish on an asset short term, but bullish long term. 例如: 你將鑄造/出售 1 個 SOL/USDC 看跌期權，同時鎖定 4000（執行價格 * 合約大小）USDC 作為 40 的[執行價格](#strike-price)的看跌期權的抵押品，並且[合約大小](#contract-size) 為 100。
+一種期權策略，包括出售[看跌](#put)期權，同時保留足夠的現金來購買[標的資產](#underlying-asset)。 如果你短期看空資產，但長期看漲，通常會使用此策略。 例如: 你將鑄造/出售 1 個 SOL/USDC 看跌期權，同時鎖定 4000（執行價格 * 合約大小）USDC 作為 40 的[執行價格](#strike-price)的看跌期權的抵押品，並且[合約大小](#contract-size) 為 100。
 
 #### 標的資產
 在編寫擔保看跌期權時鎖定的資產，或執行掩護性看漲期權時接收的資產。
@@ -53,86 +53,91 @@ An option strategy composed of selling a [put](#put) option while retaining enou
 行權是指買賣期權合約中規定的[標的資產](#underlying-asset)的權利生效。 當看漲期權持有者行使他們的合約時，他們將按照約定的[行權價](#strike-price)從期權賣家那裡購買標的資產。 當看跌期權持有者行使他們的合約時，他們將以約定的執行價格將標的資產出售給期權賣方。
 
 #### 隱含波動率 (IV)
-隱含波動率 (IV) 是對標的資產波動率的估計，此波動率源自期權的市場價值。 It is essentially the market's forecast of a likely movement in an underlying asset's price.
+隱含波動率 (IV) 是對標的資產波動率的估計，此波動率源自期權的市場價值。 它本質上是市場對標的資產價格可能變動的預測。
 
-#### In the Money
-An In the Money(ITM) option is one with a [strike price](#strike-price) that has already been surpassed by the price of the [underlying asset](#underlying-asset).
+#### 價內 (In the Money)
+價內期權(ITM) 是一種[標的資產](#underlying-asset)的價格已經超越[行權價](#strike-price)的期權。
 
-#### Out of the Money
-An Out of the Money(OTM) option is one with a [strike price](#strike-price) that the price of the [underlying asset](#underlying-asset) has yet to reach.
+#### 價外(Out of the Money)
+價外期權(OTM) 是一種[標的資產](#underlying-asset)價格還沒有達到[行權價](#strike-price)的期權。
 
-#### At the Money
-An At the Money(ATM) option is one with a [strike price](#strike-price) that is equal to the current price of the [underlying asset](#underlying-asset).
+#### 價平 (At the Money)
+價平期權(ATM) 是一種[行權價](#strike-price)等於[標的資產](#underlying-asset)當前價格的期權。
 
-### The Greeks
+### 指標
 
 #### Beta
-Beta is a measure of the volatility of an asset compared to the overall market. In addition to being a measure of the volatility of an asset compared to the overall market, beta can also be used to assess the risk of a coin in comparison to a benchmark.
+Beta 是衡量資產與整體市場相比的波動性的指標。 除了衡量資產相對於整體市場的波動性之外，Beta 還可以用於評估與基準相比的代幣風險。
 
-Example: If you took the entire crypto market and compared it against itself you would get a beta value of 1. However, if you take a specific coin such as SOL and compare it against the crypto market, you will likely get a beta value that is higher or lower than 1.
+範例：如果你將整個加密貨幣市場與其本身進行比較，你將得到 1 的 Beta 值。 但是如果你將特定代幣（例如 SOL）與加密貨幣市場進行比較，你可能會得到高於或低於 1 的 Beta 值。
 
-Beta values higher than 1 indicate that a coin is more volatile than the overall market while also being correlated to the overall market. On the other hand, beta values lower than 1 indicate that a coin is less volatile in comparison to the market, or that it is not correlated to the market.
+Beta 值高於 1 表示代幣比整體市場更不穩定，同時也與整體市場相關。 另一方面，低於 1 的 Beta 值代表與市場相比，代幣的波動性較小，或者與市場無關。
 
 #### Delta
-Delta measures an option's sensitivity to a change in price of the [underlying asset](#underlying-asset). Delta is measuring the rate of change between the option’s price and a $1 change in the underlying asset's price.
+Delta 衡量期權對[標的資產](#underlying-asset)價格變化的敏感性。 Delta 衡量期權價格與標的資產價格變化 1 美元之間的變化率。
 
-Example: A delta of 0.40 means that in theory, the option's price will move $0.40 for every $1 move in the underlying asset's price.
+範例：0.40 的 Delta 意味著理論上，標的資產價格每變動 1 美元，期權的價格就會變動 0.40 美元。
 
-Delta can be a number between -1 and 1, depending on the type of contract. [Call](#call) options can range from 0 to 1, while [put](#put) options can range from -1 to 0.
+Delta 可以是介於 -1 和 1 之間的數字，具體取決於合約類型。 [看漲](#call) 期權的範圍可以從 0 到 1，而 [看跌](#put) 期權的範圍可以從 -1 到 0。
 
 #### Gamma
-Gamma is the rate of change in an option's [delta](#delta) per 1 point move in the [underlying asset](#underlying-asset) price. When an option's price is deep [ITM](#in-the-money) or [OTM](#out-of-the-money), it's gamma is near zero. When the option's price is [ATM](#at-the-money), it's gamma is large. All long options have a positive gamma, while all short options have a negative gamma.
+Gamma 是在[標的資產](#underlying-asset)價格中每移動 1 個點的期權[Delta](#delta)變化率。 當期權的價格在 [價內(ITM)](#in-the-money) 或 [價外(OTM)](#out-of-the-money) 時，它的Gamma值接近 零。 當期權的價格在 [價平(ATM)](#at-the-money) 時, 它的Gamma值會非常大。 所有多頭期權都有一個正的Gamma值，而所有空頭期權都有一個負的Gamma值。
 
 #### Vega
-Vega measures an options sensitivity to [implied volatility](#iv).
+Vega 衡量期權對[隱含波動率](#iv)的敏感性。
 
-Example: The value of an option is 5.00, implied volatility is at 20, and the option has a vega of .12. If implied volatility moved to 21.5, the option's price would increase by 1.5 x .12 = .18 making the new value 5.18.
+範例：期權的價值為 5.00，隱含波動率為 20，期權的 Vega 為 0.12。 如果隱含波動率移動到 21.5，期權的價格將增加 1.5 x 0.12 = 0.18，使新的價值變為 5.18。
 
 #### Theta
-Theta, also known as time decay, is an option's sensitivity to time. It is the amount your option's value decreases as it gets closer to it's [expiration](#expiration) date. Theta is typically represented as a negative number because once you purchase an option and time starts to move towards the expiration date, the potential for the option to be profitable begins to decrease.
+Theta，也稱為時間衰減，是一種期權對時間的敏感性的指標。 它是你的期權價值隨著接近[到期](#expiration)日期而減少的金額。 Theta 通常表示為負數，因為一旦你購買了期權並且時間開始接近到期日，期權獲利的可能性就會開始下降。
 
-However, when you sell an option, theta usually increases. This is because as a seller of an option, it is typically more beneficial to you if the option expires without being exercised. This is why selling options are often referred to as "postive theta trades".
+但是當你賣出期權時，Theta 通常會增加。 這是因為作為期權的賣方，如果期權到期而不被行使，通常對你更有利。 這就是為什麼賣出期權通常被稱為“正Theta交易”。
 
 ### 期權策略
 
-#### Bull Call Spread
-A Bull Call Spread is an option strategy that you can utilize if you think the price of the [underlying asset](#underlying-asset) will go up, but not by much. To execute this strategy, you use two call options to form a price range with a lower and higher [strike price](#strike-price).
+#### 買權多頭價差
+買權多頭價差是一種期權策略，如果你認為[標的資產](#underlying-asset)的價格會上漲，但幅度不會太大，你可以使用這個策略。 要執行此策略，你需要使用兩個[行權價](#strike-price)不同的看漲期權來形成一個價格範圍。
 
-To start, purchase a [call](#call) with a [strike price](#strike-price) that is higher than the current market price of the [underlying asset](#underlying-asset). Then, sell a [call](#call) with a [strike price](#strike-price) that is even higher than the strike price of the call you purchased with the same [expiration](#expiration) date. Selling this [call](#call) helps offset the cost of purchasing the original call.
+首先，購買[看漲期權](#call)，其[行權價](#strike-price)高於其[標的資產](#underlying-asset)的當前市場價格。 然後，賣出[看漲期權](#call)，其[行權價](#strike-price)高於你購買的相同[到期日](#expiration)的看漲期權的行權價 。 賣出此[看漲期權](#call)有助於抵消購買原始看漲期權的成本。
 
-When executing this strategy, your losses are limited to the net cost of creating the spread, but this also limits your potential gains. Typically this strategy is executed during times of high market volatility.
+執行此策略時，你的損失僅限於創建價差的淨成本，但這也限制了你的潛在收益。 通常此策略是在市場高度波動期間執行的。
 
-#### Bear Put Spread
-The Bear Put Spread can be used when you are expecting a moderate to significant drop in an asset’s price, and you want to reduce the cost and risk associated with your trade. Similar to the [Bull Call Spread](#bull-call-spread), this strategy is achieved by using two separate [put](#put) options.
+#### 賣權空頭價差
+當你預計資產價格會有中度至顯著的下跌，並且你希望降低與交易相關的成本和風險時，可以使用賣權空頭價差。 與[買權多頭價差](#bull-call-spread)類似，此策略是通過使用兩個個別的[看跌期權](#put)來實現的。
 
-To execute this trade, you would purchase a [put](#put) option while also selling a put option with the same [expiration](#expiration) date at a lower [strike price](#strike-price). Selling the [put](#put) option with the lower [strike price](#strike-price) helps cover some of the premium you paid when purchasing the initial put. You’re also greatly reducing your risk as the risk is limited to the cost of setting up the spread.
+要執行此交易，你將購買[看跌](#put)期權，同時賣出具有相同[到期](#expiration)日期[執行價](#strike-price)較低的看跌期權。 賣出具有較低[行權價](#strike-price)的[看跌期權](#put)有助於彌補你在購買原始看跌期權時支付的部分溢價。 你也大幅降低了風險，因為風險僅限於設置價差的成本。
 
-This strategy allows you to profit from the price of the [underlying asset](#underlying-asset) going down while not exposing you to the theoretically unlimited loss that can occur when short selling.
+這種策略讓你從[標的資產](#underlying-asset)的價格下跌中獲利，同時不會讓你面臨做空時理論上可能會發生的無限損失。
 
-#### Protective Collar
-When market volatility picks up drastically, and you’re not sure what’s going to happen, you can utilize this strategy. With this strategy you can protect yourself from short term downside losses, while also retaining the ability to make money if price goes up.
+#### 保護期權固定波幅
+當市場波動急劇上升而且你不確定會發生什麼時，你可以使用此策略。 使用此策略，你可以保護自己免受短期下跌損失，同時還可以在價格上漲時保留賺錢的能力。
 
-If you hold the [underlying asset](#underlying-asset), and want to protect this position from a potentially drastic sell off, you would first purchase an [OTM](#out-of-the-money) [put](#put). Then, you would sell an [OTM](#out-of-the-money) [call](#call) with the same [expiration](#expiration) date as the [put](#put) you purchased.
+如果你持有[標的資產](#underlying-asset)，並希望保護這個資產免受潛在的劇烈拋售，首先你需要購買[價外(OTM)](#out-of- the-money) [看跌期權](#put)。 然後你需要賣出具有與你購買的[看跌期權](#put) 相同 [到期日期](#expiration) 的 [價外(OTM)](#out-of-the-money) [看漲期權](#call) 。
 
-Writing the [call](#call) option essentially pays for the [put](#put), and in theory you could even end up with a net gain using this strategy. This sound like a no brainer way to protect your position, but there is one major drawback. If price doesn’t go down, and instead surges upwards past the written call's [strike price](#strike-price), you’ll be forced to sell your [underlying asset](#underlying-asset) to the purchaser of the [call](#call) option.
+寫[看漲期權](#call)基本上是支付[看跌期權](#put)的費用，理論上你甚至可以使用此策略並獲得淨收益。 這聽起來像是一種保護你的資產的明智方法，但有一個主要的缺點。 如果價格沒有下降而是上漲超過編寫看漲期權的[行權價](#strike-price)，你將被迫出售你的[標的資產](#underlying-asset)給[看漲](#call)期權的購買者。
 
-#### Long Straddle
-This strategy is typically used when traders expect a news event to move the price of a particular asset. To execute this strategy, you would purchase both a [call](#call) and a [put](#put) with the same [expiration](#expiration) date and [strike price](#strike-price). Since the strike price is [ATM](#at-the-money) or close to it, small moves in either direction are essentially canceled out.
+#### 買進跨式
+當交易者預計新聞事件會影響特定資產的價格時，通常會使用此策略。 要執行此策略，你需要購買具有相同 [到期日期](#expiration) 和 [行權價](#strike-price)。 由於行權價是[價平(ATM)](#at-the-money)或接近於該價格，因此任一方向的小幅波動基本上都被抵消了。
 
-While this strategy can be a useful way to prepare yourself for a potentially large move in price, it does have downsides. The market may not react to this event at all, and also, you are not the only person aware of this event. Options sellers will increase their premiums because of this event, making this an expensive strategy to execute.
+雖然這種策略是為潛在的價格大幅波動做好準備的有用方法，但它確實有缺點。 市場可能根本不會對此事件做出反應，而且你並不是唯一知道此事件的人。 期權賣方會因為這個事件提高他們的溢價，這會變成執行起來成本高昂的策略。
 
-Due to the expensive nature of this strategy, it is cheaper and arguably better to simply bet on one direction. This decision is of course up to the trader. Considering that the potential profit is unlimited, and the potential loss is limited, it may be worth it.
+由於這種策略的昂貴性質，簡單地押注一個方向更便宜而且可以說更好。 這個決定當然取決於交易者。 考慮到潛在的利潤是無限的，而潛在的損失是有限的，這可能是值得的。
 
-#### Long Strangle
-This strategy is nearly identical to the [Long Straddle](#long-straddle) strategy except for two key differences. Rather than purchasing an [ATM](#at-the-money) [call](#call) and an ATM [put](#put), you would purchase an [OTM](#out-of-the-money) call and an OTM put. Also, rather than having the same [strike price](#strike-price), the call and put you purchase for this strategy will have different strike prices. They will still have the same [expiration](#expiration) date.
+#### 買進勒式
+除了兩個關鍵區別之外，此策略與[買進跨式](#long-straddle)策略幾乎相同。 而不是購買ATM</a>[電話](#call)和ATM
 
-Purchasing an [OTM](#out-of-the-money) [call](#call) and an OTM [put](#put) makes this strategy cheaper to execute than a Long Straddle, however, it is considered rikiser because price will have to an even larger amount to be profitable.
+put< /a>，您將購買 [OTM](#out-of-the-money) 看漲期權和 OTM 看跌期權。 與其購買 [價平(ATM)](#at-the-money) 看漲期權 和 [價平(ATM)](#at-the-money) 看跌期權，不如購買一個 [價外(OTM)](#out-of-the-money) 看漲期權 和一個 [價外(OTM)](#out-of-the-money) 看跌期權。 此外，你為此策略購買的看漲期權和看跌期權將具有不同的行權價，而不是具有相同的[行權價](#strike-price)。 它們仍將具有相同的[到期日期](#expiration)。</p> 
 
-#### Long Call Butterfly Spread
-In general, Butterfly Spreads are strategies that utilize both bull spreads and bear spreads to generate a market neutral strategy with fixed risk and profit. These strategies utilize four option contracts that all have the same [expiration](#expiration) date, with three equidistant [strike prices](#strike-price). The Long Call Butterfly Spread is essentially a combination of a [bull call spread](#bull-call-spread) and a bear call spread.
+購買 [價外(OTM)](#out-of-the-money)[看漲期權](#call) 和 [價外(OTM)](#out-of-the-money)[看跌期權](#put) 使此策略的執行成本低於買進跨式，但是它被認為是更有風險的，因為價格必須更高才能盈利。 
 
-To set up a Long Call Butterfly spread, first you would buy a [call](#call) at strike price A. Then sell two calls at strike price B. Finally, you would purchase one last call at strike price C.
 
-The sweet spot for this set up is if the asset is at strike B upon expiration. This makes your max potential profit from this strategy strike B minus strike A minus the net debit paid. Your max potential loss is simply the cost to set up the spread. Your two break even points are at strike price A plus the net debit paid, and strike price C minus the net debit paid.
 
-Since you are managing four separate contracts with three different strike prices, we would only recommend this strategy once you are a more seasoned options trader.
+#### 買進蝶式價差
+
+一般來說，蝶式價差是利用牛市價差和熊市價差來生成具有固定風險和利潤的市場中性策略。 這些策略利用四個期權合約，它們都具有相同的[到期日期](#expiration)，以及三個等距的[行權價](#strike-price)。 買進蝶式價差本質上是[買權多頭價差](#bull-call-spread)和賣權空頭價差的組合。 
+
+要設置買進蝶式價差策略，首先你需要以行權價 A 購買一個[看漲期權](#call)。然後以行權價 B 賣出兩個看漲期權。最後你需要購買一個行權價C的看漲期權。
+
+此策略的最佳位置是資產在到期時處於行權價 B。 你能從此策略獲得的最大潛在利潤是行權價 B 減去行權價 A 減去支付的溢價。 你的最大潛在損失只是設置點差的成本。 你的兩個盈虧平衡點是行權價 A 加上支付的溢價，以及行權價 C 減去支付的溢價。 
+
+由於你需要管理具有三個不同執行價格的四個獨立合約，因此我們只會在你是經驗豐富的期權交易者時才推薦此策略。

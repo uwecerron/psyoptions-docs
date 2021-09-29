@@ -12,8 +12,8 @@ slug: /fonts-and-styles
 
 ![PsyOps](/img/PsyOps.svg) ![第二張](/img/Secondary.svg)
 
-#### PsyOptions Colors
-The following hexadecimal color codes are the official PsyOptions colors. ![colors](/img/designers/PsyOptionsColors.png)
+#### PsyOptions 顏色
+以下十六進制顏色代碼是官方 PsyOptions 的顏色。 ![顏色](/img/designers/PsyOptionsColors.png)
 
 #### PsyOptions 字體
 我們的標題是使用全大寫的 Goldman 字體。 我們也使用這種字體作為我們的Logo，正確的大寫方式是“PsyOptions”。
