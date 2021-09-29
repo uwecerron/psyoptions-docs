@@ -31,7 +31,7 @@ Generate a `TransactionInstruction` for canceling an open order by the set clien
 
 #### Defined in
 
-[serumInstructions/cancelOrder.ts:51](https://github.com/mithraiclabs/psyoptions-ts/blob/c67815d/packages/psy-american/src/serumInstructions/cancelOrder.ts#L51)
+[serumInstructions/cancelOrder.ts:51](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/serumInstructions/cancelOrder.ts#L51)
 
 ___
 
@@ -58,7 +58,7 @@ Create a TransactionInstruction for canceling a specific _order_
 
 #### Defined in
 
-[serumInstructions/cancelOrder.ts:18](https://github.com/mithraiclabs/psyoptions-ts/blob/c67815d/packages/psy-american/src/serumInstructions/cancelOrder.ts#L18)
+[serumInstructions/cancelOrder.ts:18](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/serumInstructions/cancelOrder.ts#L18)
 
 ___
 
@@ -85,7 +85,7 @@ Create a proxied InitOpenOrdersInstruction
 
 #### Defined in
 
-[serumInstructions/initOpenOrders.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/c67815d/packages/psy-american/src/serumInstructions/initOpenOrders.ts#L17)
+[serumInstructions/initOpenOrders.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/serumInstructions/initOpenOrders.ts#L17)
 
 ___
 
@@ -112,7 +112,7 @@ Create a new order proxied through the Psy American Protocol
 
 #### Defined in
 
-[serumInstructions/newOrder.ts:21](https://github.com/mithraiclabs/psyoptions-ts/blob/c67815d/packages/psy-american/src/serumInstructions/newOrder.ts#L21)
+[serumInstructions/newOrder.ts:21](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/serumInstructions/newOrder.ts#L21)
 
 ___
 
@@ -142,4 +142,4 @@ Create a TransactionInstruction for the settleFunds instruction
 
 #### Defined in
 
-[serumInstructions/settleFunds.ts:20](https://github.com/mithraiclabs/psyoptions-ts/blob/c67815d/packages/psy-american/src/serumInstructions/settleFunds.ts#L20)
+[serumInstructions/settleFunds.ts:20](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/serumInstructions/settleFunds.ts#L20)

@@ -29,4 +29,4 @@ address.
 
 #### Defined in
 
-[serumUtils.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/c67815d/packages/psy-american/src/serumUtils.ts#L16)
+[serumUtils.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/serumUtils.ts#L16)

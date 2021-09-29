@@ -124,9 +124,9 @@ Theta，也稱為時間衰減，是一種期權對時間的敏感性的指標。
 由於這種策略的昂貴性質，簡單地押注一個方向更便宜而且可以說更好。 這個決定當然取決於交易者。 考慮到潛在的利潤是無限的，而潛在的損失是有限的，這可能是值得的。
 
 #### 買進勒式
-除了兩個關鍵區別之外，此策略與[買進跨式](#long-straddle)策略幾乎相同。 而不是購買ATM</a>[電話](#call)和ATM
+除了兩個關鍵區別之外，此策略與[買進跨式](#long-straddle)策略幾乎相同。 而不是購買ATM[電話](#call)和ATM
 
-put< /a>，您將購買 [OTM](#out-of-the-money) 看漲期權和 OTM 看跌期權。 與其購買 [價平(ATM)](#at-the-money) 看漲期權 和 [價平(ATM)](#at-the-money) 看跌期權，不如購買一個 [價外(OTM)](#out-of-the-money) 看漲期權 和一個 [價外(OTM)](#out-of-the-money) 看跌期權。 此外，你為此策略購買的看漲期權和看跌期權將具有不同的行權價，而不是具有相同的[行權價](#strike-price)。 它們仍將具有相同的[到期日期](#expiration)。</p> 
+put，您將購買 [OTM](#out-of-the-money) 看漲期權和 OTM 看跌期權。 與其購買 [價平(ATM)](#at-the-money) 看漲期權 和 [價平(ATM)](#at-the-money) 看跌期權，不如購買一個 [價外(OTM)](#out-of-the-money) 看漲期權 和一個 [價外(OTM)](#out-of-the-money) 看跌期權。 此外，你為此策略購買的看漲期權和看跌期權將具有不同的行權價，而不是具有相同的[行權價](#strike-price)。 它們仍將具有相同的[到期日期](#expiration)。
 
 購買 [價外(OTM)](#out-of-the-money)[看漲期權](#call) 和 [價外(OTM)](#out-of-the-money)[看跌期權](#put) 使此策略的執行成本低於買進跨式，但是它被認為是更有風險的，因為價格必須更高才能盈利。 
 
