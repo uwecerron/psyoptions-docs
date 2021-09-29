@@ -127,7 +127,7 @@ Due to the expensive nature of this strategy, it is cheaper and arguably better 
 #### Long Strangle
 This strategy is nearly identical to the [Long Straddle](#long-straddle) strategy except for two key differences. Rather than purchasing an [ATM](#at-the-money) [call](#call) and an ATM [put](#put), you would purchase an [OTM](#out-of-the-money) call and an OTM put. Also, rather than having the same [strike price](#strike-price), the call and put you purchase for this strategy will have different strike prices. They will still have the same [expiration](#expiration) date.
 
-Purchasing an [OTM](#out-of-the-money) [call](#call) and an OTM [put](#put) makes this strategy cheaper to execute than a Long Straddle, however, it is considered rikiser because price will have to an even larger amount to be profitable. 
+Purchasing an [OTM](#out-of-the-money) [call](#call) and an OTM [put](#put) makes this strategy cheaper to execute than a Long Straddle, however, it is considered riskier because price will have to be an even larger amount to be profitable. 
 
 #### Long Call Butterfly Spread
 In general, Butterfly Spreads are strategies that utilize both bull spreads and bear spreads to generate a market neutral strategy with fixed risk and profit. These strategies utilize four option contracts that all have the same [expiration](#expiration) date, with three equidistant [strike prices](#strike-price). The Long Call Butterfly Spread is essentially a combination of a [bull call spread](#bull-call-spread) and a bear call spread. 
