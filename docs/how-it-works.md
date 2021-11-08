@@ -42,7 +42,7 @@ pub struct OptionMarket {
 ````
 
 It is important to note that the protocol uses deterministic addressing of markets, based on 
-the unique parameters, so there can never be two of the exact same market. This was a concious
+the unique parameters, so there can never be two of the exact same market. This was a conscious
 decision of V1 to reduce the chance of fragmented liquidity. 
 
 Creating a new market is extremely cheap and easy! When a new market is initialized a few things
