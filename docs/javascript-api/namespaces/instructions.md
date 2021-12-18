@@ -32,7 +32,7 @@ or the quote assets in the pool have already been claimed.
 
 #### Defined in
 
-[instructions/burnWriterForQuote.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/burnWriterForQuote.ts#L17)
+[instructions/burnWriterForQuote.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/burnWriterForQuote.ts#L17)
 
 ___
 
@@ -59,7 +59,7 @@ Close _size_ option positions by burning the OptionTokens and WriterTokens.
 
 #### Defined in
 
-[instructions/closePosition.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/closePosition.ts#L16)
+[instructions/closePosition.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/closePosition.ts#L16)
 
 ___
 
@@ -86,7 +86,7 @@ the contract(s).
 
 #### Defined in
 
-[instructions/closePostExpiration.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/closePostExpiration.ts#L16)
+[instructions/closePostExpiration.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/closePostExpiration.ts#L16)
 
 ___
 
@@ -115,32 +115,7 @@ Exercise OptionTokens you're holding
 
 #### Defined in
 
-[instructions/exerciseOptions.ts:20](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/exerciseOptions.ts#L20)
-
-___
-
-### getMarketAndAuthorityInfo
-
-▸ `Const` **getMarketAndAuthorityInfo**(`program`, `optionMarketKey`, `dexProgramId`): `Promise`<`Object`\>
-
-Given an OptionMarket address and DEX program, generate the Serum market key,
-market authority, and authority bump seed.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `program` | `Program` | PsyOptions American V1 Anchor program |
-| `optionMarketKey` | `PublicKey` | The key for the OptionMarket |
-| `dexProgramId` | `PublicKey` | Serum DEX public key |
-
-#### Returns
-
-`Promise`<`Object`\>
-
-#### Defined in
-
-[instructions/initializeSerumMarket.ts:185](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/initializeSerumMarket.ts#L185)
+[instructions/exerciseOptions.ts:20](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/exerciseOptions.ts#L20)
 
 ___
 
@@ -168,7 +143,7 @@ Initialize a new OptionMarket
 
 #### Defined in
 
-[instructions/initializeMarket.ts:29](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/initializeMarket.ts#L29)
+[instructions/initializeMarket.ts:29](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/initializeMarket.ts#L29)
 
 ___
 
@@ -198,7 +173,7 @@ ___
 
 #### Defined in
 
-[instructions/initializeSerumMarket.ts:24](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/initializeSerumMarket.ts#L24)
+[instructions/initializeSerumMarket.ts:23](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/initializeSerumMarket.ts#L23)
 
 ___
 
@@ -225,7 +200,7 @@ Create a TransactionInstruction for minting _size_ option contracts
 
 #### Defined in
 
-[instructions/mintOptions.ts:79](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/mintOptions.ts#L79)
+[instructions/mintOptions.ts:79](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/mintOptions.ts#L79)
 
 ___
 
@@ -252,4 +227,4 @@ Execute a transaction to mint _size_ options
 
 #### Defined in
 
-[instructions/mintOptions.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/2ad4978/packages/psy-american/src/instructions/mintOptions.ts#L17)
+[instructions/mintOptions.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/instructions/mintOptions.ts#L17)
