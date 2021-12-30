@@ -2,8 +2,8 @@ module.exports = {
   someSidebar: [
     {
       "Getting Started": ["intro", "mission", "glossary", "options-strategies"],
-      "Architecture Design": ["arch-option-types", "arch-put-call"],
-      "Amercian Style Protocol (V1)": ["american-how-it-works"],
+      "Amercian Style Protocol (V1)": ["arch-option-types", "arch-put-call", "american-how-it-works"],
+      "European Style Protocol (V1)": ["european-how-it-works"],
       "Program Integration": ["program-integration-start"],
       Clients: [
         "client-integration-overview",
@@ -14,13 +14,13 @@ module.exports = {
           Rust: ["rust-start"],
         },
       ],
-      Designers: ["design-fonts-styles"],
+      Designers: ["design-logos-fonts"],
       "Devnet Testing": [
         "devnet-tokens",
         "beta-test-for",
         "devnet-beta-testing",
       ],
-      "PSY Token": ["token-incentives"],
+      "PSY Token": ["tokenomics", "governance", "token-incentives"],
     },
     "faq",
   ],
