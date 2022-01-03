@@ -1,30 +1,39 @@
 ---
 id: options-strategies
-title: 备选战略
-sidebar_label: 备选战略
+title: 期權策略
+sidebar_label: 期權策略
 slug: /options-strategies
 ---
 
-#### 预期价格会提高
+#### 預期價格會上漲
 
-购买 [通话](./glossary.md#call)
+買 [看漲期權](./glossary.md#call)
 
-出售 [安全封装](./glossary.md#secured-put)
+賣 [擔保看跌期權](./glossary.md#secured-put)
 
-#### 预期价格下移
+執行 [買權多頭價差](./glossary.md#bull-call-spread)
 
-购买 [放置](./glossary.md#put)
+#### 預期價格會下跌
 
-出售一个 [封接来电](./glossary.md#covered-call)
+買 [看跌期權](./glossary.md#put)
 
-#### 要上下的预期价格
+賣 [ 掩護性看漲期權 (Covered Call) ](./glossary.md#covered-call)
 
-Straddle 或 strangle
+執行 [賣權空頭價差](./glossary.md#bear-put-spread)
 
-#### 预期价格保持相同
+#### 預期價格會上下震動
 
-正在出售一个 [封接来电](./glossary.md#covered-call)
+執行 [保護期權固定波幅 ](./glossary.md#protective-collar)
 
-卖出 [安全的 Put](./glossary.md#secured-put)
+執行 [做多跨式期權](./glossary.md#long-straddle)
 
-日历分布
+執行 [做多勒式期權](./glossary.md#long-strangle)
+
+#### 預期價格會維持不變
+
+賣 [掩護性看漲期權 (Covered Call)](./glossary.md#covered-call)
+
+賣 [擔保看跌期權 (Secured Put) ](./glossary.md#secured-put)
+
+執行 [做多看漲蝶式價差](./glossary.md#long-call-butterfly-spread)
+

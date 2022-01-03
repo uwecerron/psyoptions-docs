@@ -12,11 +12,14 @@ Nous avons quelques variations de logo différentes qui peuvent être utilisées
 
 ![Opérations Criminelles](/img/PsyOps.svg) ![Secondaire](/img/Secondary.svg)
 
-#### Polices PsyOptions
-Pour nos en-têtes, nous utilisons la police Goldman dans toutes les majuscules. Nous utilisons également cette police pour notre logo dont la propre majuscule est « PsyOptions ».
+#### PsyOptions Colors
+The following hexadecimal color codes are the official PsyOptions colors. ![colors](/img/designers/PsyOptionsColors.png)
 
-![homme d'or](/img/designers/goldman.png)
+#### PsyOptions Fonts
+For our headers, we use the Goldman font in all caps. We also use this font for our logo with the proper capitalization being “PsyOptions”.
 
-Pour tout ce qui se trouve en dehors de nos en-têtes, nous utilisons la police Manrope avec un poids de police de 500. Cette police peut également être utilisée pour les en-têtes dont le poids de police est de 700 ou 800, Cependant, cette police ne doit pas être utilisée pour le texte du logo.
+![goldman](/img/designers/goldman.png)
+
+For everything outside of our headers, we use the Manrope font with a font weight of 500. This font could also be used for headers with the font weight being 700 or 800, however, this font should not be used for the logo text.
 
 ![manrope](/img/designers/manrope.png)

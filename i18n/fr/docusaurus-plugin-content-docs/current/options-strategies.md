@@ -11,20 +11,29 @@ Acheter un [Appel](./glossary.md#call)
 
 Vendre un objet [placé sécurisé](./glossary.md#secured-put)
 
+Execute a [Bull Call Spread](./glossary.md#bull-call-spread)
+
 #### Attendez-vous à une baisse du prix
 
-Achetez un [Mettez](./glossary.md#put)
+Buy a [Put](./glossary.md#put)
 
-Vendez un [appel couvert](./glossary.md#covered-call)
+Sell a [Covered Call](./glossary.md#covered-call)
+
+Execute a [Bear Put Spread](./glossary.md#bear-put-spread)
 
 #### Attendez-vous à une hausse ou à une baisse du prix
 
-Straddle ou étranglement
+Execute a [Protective Collar](./glossary.md#protective-collar)
+
+Execute a [Long Straddle](./glossary.md#long-straddle)
+
+Execute a [Long Strangle](./glossary.md#long-strangle)
 
 #### Attendez-vous à ce que le prix reste identique
 
-Vendre un [appel couvert](./glossary.md#covered-call)
+Selling a [Covered Call](./glossary.md#covered-call)
 
-Vendre un [Placement sécurisé](./glossary.md#secured-put)
+Selling a [Secured Put](./glossary.md#secured-put)
 
-Écart du calendrier
+Execute a [Long Call Butterfly Spread](./glossary.md#long-call-butterfly-spread)
+

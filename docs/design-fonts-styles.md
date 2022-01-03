@@ -18,6 +18,13 @@ We have a few different logo variations that can be used in your design process.
 ![Inline3](/img/PsyOptionsBanner3.png)
 
 ### PsyOptions Fonts
+
+#### PsyOptions Colors
+The following hexadecimal color codes are the official PsyOptions colors.
+![colors](/img/designers/PsyOptionsColors.png)
+
+#### PsyOptions Fonts
+
 For our headers, we use the Goldman font in all caps. We also use this font for our logo with the proper capitalization being “PsyOptions”. 
 
 ![goldman](/img/designers/goldman.png)

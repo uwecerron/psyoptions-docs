@@ -1,26 +1,26 @@
 {
   "version.label": {
-    "message": "下一个",
+    "message": "下一頁",
     "description": "The label for version current"
   },
   "sidebar.someSidebar.category.Getting Started": {
-    "message": "正在开始",
+    "message": "入門",
     "description": "The label for category Getting Started in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Architecture Design": {
-    "message": "建筑设计",
+    "message": "結構設計",
     "description": "The label for category Architecture Design in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Amercian Style Protocol (V1)": {
-    "message": "Amercian 样式协议 (V1)",
+    "message": "美式期權協議 (V1)",
     "description": "The label for category Amercian Style Protocol (V1) in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Program Integration": {
-    "message": "方案集成",
+    "message": "程式整合",
     "description": "The label for category Program Integration in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Clients": {
-    "message": "客户",
+    "message": "用戶",
     "description": "The label for category Clients in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.JavaScript": {
@@ -28,19 +28,19 @@
     "description": "The label for category JavaScript in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Rust": {
-    "message": "赤色",
+    "message": "Rust",
     "description": "The label for category Rust in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Designers": {
-    "message": "设计师",
+    "message": "設計者",
     "description": "The label for category Designers in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.Devnet Testing": {
-    "message": "Devnet Testing",
+    "message": "開發網測試",
     "description": "The label for category Devnet Testing in sidebar someSidebar"
   },
   "sidebar.someSidebar.category.PSY Token": {
-    "message": "PSY 令牌",
+    "message": "PSY代幣",
     "description": "The label for category PSY Token in sidebar someSidebar"
   }
 }

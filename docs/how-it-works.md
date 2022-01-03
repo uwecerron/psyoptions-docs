@@ -21,8 +21,7 @@ on those markets is a topic for another discussion ;).
 
 Option markets themselves are completely open and permissionless. If there are a pair of assets
 you want to write options on, you can create that market! To do so you need to use the 
-`InitializeMarket` instruction. Each market is governed by specific parameters that determine 
-its fungibility. Those parameters include:
+`InitializeMarket` instruction. Each market is governed by specific parameters that determine its fungibility. Those parameters include:
 
 ````Rust
 pub struct OptionMarket {
@@ -62,7 +61,7 @@ of a CALL, and all of V1's markets require 100% collateral upfront. More can be 
 [here](./arch-put-call.md).
 
 To mint a contract, the contract writer must put up 100% of the `underlying_amount_per_contract` 
-plus a 5bps minting fee. This small fee will got to the PsyOptions treasury and will be adjustable (or removable) via 
+plus a 5bps minting fee. This small fee will go to the PsyOptions treasury and will be adjustable (or removable) via 
 governance. So the total underlying assets required to mint 1 contract is:
 
 `underlying_assets_required = underlying_amount_per_contract + (underlying_amount_per_contract * 0.0005)`
@@ -144,8 +143,9 @@ What happens if you wrote too many contracts at once? Or your exposure has chang
 to close your position? This is where the `ClosePosition` instruction comes in. This instruction 
 **requires you to have both the OptionToken and the WriterToken**. At anypoint (pre or post 
 expiration) if a wallet calls this instruction with the correct token pair preset, it will 
-receive the `underlying_amount_per_contract`. The protocol checks and burns both tokens and 
-then transfers the underlying assets from the pool to the wallet. 
+receive the `underlying_amount_per_contract`. The protocol checks and burns both tokens and then transfers the underlying assets from the pool to the wallet. 
+
+
 
 
 
