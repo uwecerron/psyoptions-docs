@@ -10,7 +10,7 @@ The principles that have guided the architecture and development of the core pro
 It is completely trustless. The core protocol makes no assumptions on how the options should be traded or priced.
 Options are represented as SPL Tokens, which means they can be traded on any DEX that supports SPL Tokens.
 
-V1 will support 100% collateralized, asset settled, covered calls and secured puts.
+V1 supports 100% collateralized, asset settled, covered calls and secured puts.
 
 ## Architecture {#architecture}
 
@@ -37,6 +37,6 @@ The other represents the written contract (the claim on the underlying asset) an
 
 ### Exercising an option
 
-Holding an option token pre expiration gives the user the ability to exercise by swapping quote asset for underlying asset.
-Whether the option is in the money or out of the money, its completely up to the token holder whether or not to exercise.
+Holding an option token pre expiration gives the user the ability to exercise by swapping the quote asset for the underlying asset.
+Whether the option is in the money or out of the money, it's completely up to the token holder whether or not to exercise.
 When exercising, the exerciser locks [strike price * underlying asset size] worth of quote asset, burns the option token, and receives the underlying asset.

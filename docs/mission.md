@@ -18,6 +18,4 @@ typically restricted to TradFi encumbents.
 
 ## Our Mission
 
-PsyOptions strives to be the most community oriented DeFi protocol. What knowledge we do not 
-posess, we seek and reward those within the community that do. We are built by the community 
-for the community.
+PsyOptions aims to bring a TradFi feel to DeFi by building a decentralized, permissionless, and community-owned financial services platform. Our vision is to not only provide our users with a decentralized options trading platform, but to become the de facto on-chain financial services platform for DeFi users across the globe. Our initial options protocols are simply the first step along the path of building towards this goal. 

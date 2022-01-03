@@ -1,21 +1,14 @@
 ---
 id: token-incentives
-title: PSY Token
-sidebar_label: token-incentives
-slug: /psy-token
+title: Token Incentives
+sidebar_label: Token Incentives
+slug: /psy-token/token-incentives
 ---
 
 _**NOTE: NO PSY TOKEN HAS BEEN MINTED OR IS CIRCULATING AT THE MOMENT. 
 ANY TOKEN CURRENTLY CLAIMING TO BE PSY IS A SCAM**_
 
 _**THE INFORMATION LAID OUT HERE ARE TENTATIVE PLANS FOR A FUTURE TOKEN**_
-
-This document does its best to explain where PsyOptions needs community contributors 
-and how those contributions are rewarded.
-
-PsyOptions aims to foster an engaging and collaboritive community, join our 
-[discord](https://discord.com/invite/MgDdJKgZJc) or [telegram](https://t.me/psyoptions) 
-to get involved in the conversations! Note: The core contributors are most active in Discord.
 
 ## Developer Contributions
 Contribute code, get PSY!
@@ -35,7 +28,7 @@ An AMM that uses contracts from PsyOptions.
 
 ### Bounties
 Below is a list of bounties PsyOptions is offering for developers in our community to help out. 
-If you're interested in working on, have completed one, etc. please reachout to 
+If you're interested in working on, have completed one, etc. please reachout to
 developers@psyoptions.io so the list can update accordingly!
 
 | Bounty Title | Short Description | More Info | PSY Allocated |
@@ -85,8 +78,3 @@ For Example:
 | address_4 | USDC 1,000 | 0.13% |
 | address_5 | USDC 9,000 | 1.2% |
 | Total | USDC 750,000 | 100% |
-
-## Marketing
-
-Pay attention to our [Twitter](https://twitter.com/PsyOptions). We will be running
-campaigns where you can get rewarded in PSY.

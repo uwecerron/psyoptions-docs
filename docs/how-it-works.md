@@ -13,7 +13,7 @@ may make with the protocol and what's happening.
 ![initialize market](/img/how-it-works/initialize_market_page.png)
 
 The protocol is designed to be a primitive, so it makes very little assumptions about options,
-how they should be traded, priced, etc. The protocol itself, also makes no assumptions on what
+how they should be traded, priced, etc. The protocol itself also makes no assumptions on what
 assets should have options and which should not. It has been built with various use cases in 
 mind, like writing contracts on NFTs, tokenized property deeds, tokenized stocks...anything 
 that can be represented as an SPL Token can have an option market. Will there be liquidity 
@@ -21,8 +21,7 @@ on those markets is a topic for another discussion ;).
 
 Option markets themselves are completely open and permissionless. If there are a pair of assets
 you want to write options on, you can create that market! To do so you need to use the 
-`InitializeMarket` instruction. Each market is goverened by specific parameters that determine 
-its fungibility. Those parameters include:
+`InitializeMarket` instruction. Each market is governed by specific parameters that determine its fungibility. Those parameters include:
 
 ````Rust
 pub struct OptionMarket {
@@ -57,8 +56,8 @@ on that next.
 Without a doubt, the most important and widely used instruction of the protocol. When you want to 
 mint a contract for a given market you need the `MintCoveredCall` instruction. It is 
 **extremely important to note** that although this instruction contains the phrase _Covered Call_
-in the V1 protocol, all contracts can be considered covered calls. PUTs are simply the reciprical 
-of the a CALL, and all of V1's markets require 100% collateral upfront. More can be read 
+in the V1 protocol, all contracts can be considered covered calls. PUTs are simply the reciprocal 
+of a CALL, and all of V1's markets require 100% collateral upfront. More can be read 
 [here](./arch-put-call.md).
 
 To mint a contract, the contract writer must put up 100% of the `underlying_amount_per_contract` 
@@ -67,13 +66,13 @@ governance. So the total underlying assets required to mint 1 contract is:
 
 `underlying_assets_required = underlying_amount_per_contract + (underlying_amount_per_contract * 0.0005)`
 
-These unserlying assets are then stored in the option markets' _Underlying Asset Pool_. If 
+These underlying assets are then stored in the option markets' _Underlying Asset Pool_. If 
 the transfer to the pool succeeds (i.e. enough underlying was posted), then the protocol 
 mints the user 2 tokens, the **OptionToken** and the **WriterToken**. 
 
 The **OptionToken is the actual contract**, which gives the holder _the right but not 
 the obligation to swap the quote assets for the underlying assets at the agreed upon 
-strike price_. The OptionToken is an SPL Token, so it can be transfered or traded on
+strike price_. The OptionToken is an SPL Token, so it can be transferred or traded on
 any venue that has SPL Token support. 
 
 The **WriterToken** denotes the holder is short the option or wrote the contract. Lets
@@ -85,7 +84,7 @@ enough of a balance. Post expiration, the WriterToken gives the holder the abili
 claim the `underlying_amount_per_contract` back from the Underlying Asset Pool.
 
 So to generate yield from writing a contract, you would sell the OptionToken. 
-That could be done OTC and transfered, on a Seurm market, or any other venue that creates
+That could be done OTC and transferred, on a Serum market, or any other venue that creates
 and exchange for a market's SPLs. 
 
 ## Exercising a contract
@@ -109,13 +108,13 @@ Now that someone has exercised, we'll cover how a contract writer can claim thos
 ## Extracting assets from an exercised contract
 <!-- TODO image of a imbalanced pools -->
 
-Economic theories have proven that it is not beneficial to exercise a contract early. But
+Economic theories have proven that it is not beneficial to exercise a contract early, but
 this is not TradFi. The composability of PsyOptions American V1 provides many use cases 
 outside of pure volatility trading, portfolio hedging, etc. where exercising early will
-most certainly happen. Lets take protocol XYZ that is running a liquidity mining program
+most certainly happen. Let's take protocol XYZ that is running a liquidity mining program
 that incentivized new liquidity providers with At The Money (ATM) contracts that expire
 in 10 years. As long as project XYZ continues to grow, these contract holders will most
-cetainly exercise early. 
+certainly exercise early. 
 
 Now when that early exercise occurs, the contract writer is able to claim the quote assets 
 as soon as they are available. To do so, the contract writer must use the 
@@ -144,8 +143,10 @@ What happens if you wrote too many contracts at once? Or your exposure has chang
 to close your position? This is where the `ClosePosition` instruction comes in. This instruction 
 **requires you to have both the OptionToken and the WriterToken**. At anypoint (pre or post 
 expiration) if a wallet calls this instruction with the correct token pair preset, it will 
-receive the `underlying_amount_per_contract`. The protocol checks and burns both tokens and 
-then transfersthe underlying assets from the pool to the wallet. 
+receive the `underlying_amount_per_contract`. The protocol checks and burns both tokens and then transfers the underlying assets from the pool to the wallet. 
 
-If you sold the OptionToken and would like to close your position, you will have to go to a venue
-that trades/sells the correct OptionToken and purchase one there.
+
+
+
+
+
