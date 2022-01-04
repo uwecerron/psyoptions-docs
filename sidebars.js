@@ -2,6 +2,7 @@ module.exports = {
   someSidebar: [
     {
       "Getting Started": ["intro", "mission", "glossary", "options-strategies"],
+      "PSY Roadmap": ["roadmap"],
       "Amercian Style Protocol (V1)": ["arch-option-types", "arch-put-call", "american-how-it-works"],
       "European Style Protocol (V1)": ["european-how-it-works"],
       "Program Integration": ["program-integration-start"],

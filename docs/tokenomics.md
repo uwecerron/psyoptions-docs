@@ -12,12 +12,30 @@ The PsyOptions protocol does generate fees from minting and exercising, volume o
 The PSY Token breakdown is as follows:
 <ul>
     <li>Team/Contributors/Advisors: 15%</li>
+    <ul>
+        <li>For building PsyOptions from the ground up.</li>
+    </ul>
     <li>Private Round 1: 5%</li>
+    <ul>
+        <li>Our initial funding round with an emphasis on Market Makers who can provide liquidity for PsyOptions.</li>
+    </ul>
     <li>Private Round 2: 7%</li>
+    <ul>
+        <li>Our second funding round with an emphasis on investors who can help PsyOptions grow. Participants of this round got in at the same price as IEO participants.</li>
+    </ul>
     <li>IEO: 3%</li>
+    <ul>
+        <li>Our IEO will be on two exchanges: FTX and Gate.</li>
+    </ul>
     <li>DAO  Treasury: 60%</li>
-    <li>External contributor fund: 8%</li>
-    <li>PSY liquidity provisions: 2%</li>
+    <ul>
+        <li>The token allocation for the PsyDAO. These tokens can be unlocked through future governance proposals to further grow the Psy Ecosystem.</li>
+    </ul>
+    <li>External Contributor Fund: 8%</li>
+    <ul>
+        <li>These tokens will be used to fund, and incentivize contributors that help grow the Psy Ecosystem. At this time they have yet to be allocated, and are not a part of the circulating supply.</li>
+    </ul>
+    <li>PSY Liquidity Provisions: 2%</li>
 </ul>
 
 #### Are Team, and Private Round Coins Vested? 
