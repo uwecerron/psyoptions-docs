@@ -15,7 +15,9 @@ The PSY Token breakdown is as follows:
     <li>Private Round 1: 5%</li>
     <li>Private Round 2: 7%</li>
     <li>IEO: 3%</li>
-    <li>DAO  Treasury: 70%</li>
+    <li>DAO  Treasury: 60%</li>
+    <li>External contributor fund: 8%</li>
+    <li>PSY liquidity provisions: 2%</li>
 </ul>
 
 #### Are Team, and Private Round Coins Vested? 
