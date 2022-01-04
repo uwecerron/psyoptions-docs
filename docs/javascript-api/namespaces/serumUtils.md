@@ -26,7 +26,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[serumUtils.ts:202](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L202)
+[serumUtils.ts:200](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L200)
 
 ___
 
@@ -48,7 +48,7 @@ ___
 
 #### Defined in
 
-[serumUtils.ts:178](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L178)
+[serumUtils.ts:176](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L176)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[serumUtils.ts:216](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L216)
+[serumUtils.ts:214](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L214)
 
 ___
 
@@ -92,7 +92,7 @@ ___
 
 #### Defined in
 
-[serumUtils.ts:188](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L188)
+[serumUtils.ts:186](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L186)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[serumUtils.ts:163](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L163)
+[serumUtils.ts:161](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L161)
 
 ___
 
@@ -139,13 +139,13 @@ address.
 
 #### Defined in
 
-[serumUtils.ts:18](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L18)
+[serumUtils.ts:18](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L18)
 
 ___
 
 ### findOpenOrdersForOptionMarkets
 
-▸ `Const` **findOpenOrdersForOptionMarkets**(`program`, `serumProgramId`, `optionMarketKeys`, `priceCurrencyKey`, `optionMetaList?`): `Promise`<`OpenOrders`[]\>
+▸ `Const` **findOpenOrdersForOptionMarkets**(`program`, `serumProgramId`, `optionMarketKeys`, `priceCurrencyKey`, `optionMetaList?`): `Promise`<`Record`<`string`, `OpenOrders`\>\>
 
 Load all the open orders for a user based on the Serum DEX and the option market keys.
 
@@ -161,11 +161,11 @@ Load all the open orders for a user based on the Serum DEX and the option market
 
 #### Returns
 
-`Promise`<`OpenOrders`[]\>
+`Promise`<`Record`<`string`, `OpenOrders`\>\>
 
 #### Defined in
 
-[serumUtils.ts:73](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L73)
+[serumUtils.ts:73](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L73)
 
 ___
 
@@ -191,4 +191,4 @@ market authority, and authority bump seed.
 
 #### Defined in
 
-[serumUtils.ts:238](https://github.com/mithraiclabs/psyoptions-ts/blob/55ee307/packages/psy-american/src/serumUtils.ts#L238)
+[serumUtils.ts:236](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumUtils.ts#L236)
