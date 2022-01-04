@@ -24,7 +24,7 @@ module.exports = {
         "beta-test-for",
         "devnet-beta-testing",
       ],
-      "PSY Token": ["tokenomics", "governance", "token-incentives"],
+      "PSY Token": ["tokenomics", "governance"],
     },
     "faq",
   ],
