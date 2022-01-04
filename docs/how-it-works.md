@@ -133,8 +133,8 @@ OptionContract **anyone holding a WriterToken for that market has a claim on the
 <!-- TODO image of full underlying asset pool, no quote -->
 
 After expiration, a contract writer has a claim on their original underlying assets that they 
-posted to write the contract. **Only after expiration** can a WriterToken sent the protocol
-to be burned in exchange for the `underlying_amount_per_contract`. This is done through the 
+posted to write the contract. **Only after expiration** can a WriterToken sent to the protocol
+be burned in exchange for the `underlying_amount_per_contract`. This is done through the 
 `ClosePostExpiration` instruction.
 
 ## Closing a position pre-expiration
