@@ -9,7 +9,18 @@ PSY is purely a governance token that manages the smart contracts, and treasury 
 
 The PsyOptions protocol does generate fees from minting and exercising, volume on permissioned Serum markets, and affiliate fees from the user interface integrated with Serum order books. These fees are deposited into an address controlled by the governance protocol, with which PSY tokens can make proposals and cast votes.
 
+### The PSY Token
+
+<ul>
+    <li>Token Symbol: PSY</li>
+    <li>Max Supply: 1,000,000,000</li>
+    <li>Circulating Supply: 42,000,000</li>
+    <li>Token Type: SPL</li>
+    <li>Token Contract: R2y9ip6mxmWUj4pt54jP2hz2dgvMozy9VTSwMWE7evs</li>
+</ul>
+
 The PSY Token breakdown is as follows:
+
 <ul>
     <li>Team/Contributors/Advisors: 15%</li>
     <ul>
@@ -26,6 +37,9 @@ The PSY Token breakdown is as follows:
     <li>IEO: 3%</li>
     <ul>
         <li>Our IEO will be on two exchanges: FTX and Gate.</li>
+        <li><strong>Note: 1% is allocated to both the FTX and Gate IEOs.
+        Then some amount sold to KOLs of the exchanges, and market maker
+        liquidity provisions. There were some numbers still up in the air, so we decided to round up to 3% for the breakdown to grant flexibility.</strong></li>
     </ul>
     <li>DAO  Treasury: 60%</li>
     <ul>
@@ -36,10 +50,13 @@ The PSY Token breakdown is as follows:
         <li>These tokens will be used to fund, and incentivize contributors that help grow the Psy Ecosystem. At this time they have yet to be allocated, and are not a part of the circulating supply.</li>
     </ul>
     <li>PSY Liquidity Provisions: 2%</li>
+    <ul>
+        <li>Reserves for market makers on exchanges.</li>
+    </ul>
 </ul>
 
 #### Are Team, and Private Round Coins Vested? 
-Yes, Team and Private Round coins are vested for four years with a one year cliff. However, during the Token Generation Event, 0.5% of the Private Round 1 and 0.7% of the Private Round 2 coins will enter the circulating supply.
+Yes, Team and Private Round coins are vested for four years with a one year cliff. However, during the Token Generation Event, 10% of the Private Round 1 and 10% of the Private Round 2 coins will enter the circulating supply.
 
 #### Where Can I Get PSY?
 PSY is currently available on the following exchanges, with more to come: 
