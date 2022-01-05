@@ -37,7 +37,7 @@ is on the client to slice the instructions to be within the limits.
 
 #### Defined in
 
-[serumInstructions/cancelOrder.ts:108](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/cancelOrder.ts#L108)
+[serumInstructions/cancelOrder.ts:108](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/cancelOrder.ts#L108)
 
 ___
 
@@ -64,7 +64,7 @@ Generate a `TransactionInstruction` for canceling an open order by the set clien
 
 #### Defined in
 
-[serumInstructions/cancelOrder.ts:62](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/cancelOrder.ts#L62)
+[serumInstructions/cancelOrder.ts:62](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/cancelOrder.ts#L62)
 
 ___
 
@@ -91,7 +91,7 @@ Create a TransactionInstruction for canceling a specific _order_
 
 #### Defined in
 
-[serumInstructions/cancelOrder.ts:21](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/cancelOrder.ts#L21)
+[serumInstructions/cancelOrder.ts:21](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/cancelOrder.ts#L21)
 
 ___
 
@@ -119,7 +119,7 @@ Create instruction to close OpenOrders account.
 
 #### Defined in
 
-[serumInstructions/closeOpenOrders.ts:18](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/closeOpenOrders.ts#L18)
+[serumInstructions/closeOpenOrders.ts:18](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/closeOpenOrders.ts#L18)
 
 ___
 
@@ -146,7 +146,7 @@ Create a proxied InitOpenOrdersInstruction
 
 #### Defined in
 
-[serumInstructions/initOpenOrders.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/initOpenOrders.ts#L17)
+[serumInstructions/initOpenOrders.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/initOpenOrders.ts#L17)
 
 ___
 
@@ -174,7 +174,7 @@ Create a MarketProxy for the Psy American V 1.1 program
 
 #### Defined in
 
-[serumInstructions/marketLoader.ts:15](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/marketLoader.ts#L15)
+[serumInstructions/marketLoader.ts:15](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/marketLoader.ts#L15)
 
 ___
 
@@ -201,7 +201,7 @@ Create a new order proxied through the Psy American Protocol
 
 #### Defined in
 
-[serumInstructions/newOrder.ts:21](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/newOrder.ts#L21)
+[serumInstructions/newOrder.ts:21](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/newOrder.ts#L21)
 
 ___
 
@@ -231,7 +231,7 @@ Create a TransactionInstruction for the settleFunds instruction
 
 #### Defined in
 
-[serumInstructions/settleFunds.ts:23](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/settleFunds.ts#L23)
+[serumInstructions/settleFunds.ts:23](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/settleFunds.ts#L23)
 
 ___
 
@@ -261,4 +261,4 @@ Note: this API abstracts the complexity of the serumReferralKey away.
 
 #### Defined in
 
-[serumInstructions/settleFunds.ts:73](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/serumInstructions/settleFunds.ts#L73)
+[serumInstructions/settleFunds.ts:73](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/serumInstructions/settleFunds.ts#L73)
