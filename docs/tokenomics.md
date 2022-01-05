@@ -14,9 +14,9 @@ The PsyOptions protocol does generate fees from minting and exercising, volume o
 <ul>
     <li>Token Symbol: PSY</li>
     <li>Max Supply: 1,000,000,000</li>
-    <li>Circulating Supply: 42,000,000</li>
+    <li>Circulating Supply: 62,000,000</li>
     <li>Token Type: SPL</li>
-    <li>Token Contract: R2y9ip6mxmWUj4pt54jP2hz2dgvMozy9VTSwMWE7evs</li>
+    <li>Token Contract: PsyFiqqjiv41G7o5SMRzDJCu4psptThNR2GtfeGHfSq</li>
 </ul>
 
 The PSY Token breakdown is as follows:
