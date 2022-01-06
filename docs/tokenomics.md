@@ -36,10 +36,9 @@ The PSY Token breakdown is as follows:
     </ul>
     <li>IEO: 3%</li>
     <ul>
-        <li>Our IEO will be on two exchanges: FTX and Gate.</li>
-        <li><strong>Note: 1% is allocated to both the FTX and Gate IEOs.
-        Then some amount sold to KOLs of the exchanges, and market maker
-        liquidity provisions. There were some numbers still up in the air, so we decided to round up to 3% for the breakdown to grant flexibility.</strong></li>
+        <li>1% FTX IEO</li>
+        <li>1% Gate IEO</li>
+        <li>1% Initial liquidity and rewards initiatives</li>
     </ul>
     <li>DAO  Treasury: 60%</li>
     <ul>
