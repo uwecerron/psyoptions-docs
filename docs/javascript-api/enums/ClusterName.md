@@ -14,7 +14,7 @@ custom_edit_url: null
 
 #### Defined in
 
-[types.ts:6](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/types.ts#L6)
+[types.ts:6](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/types.ts#L6)
 
 ___
 
@@ -24,7 +24,7 @@ ___
 
 #### Defined in
 
-[types.ts:9](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/types.ts#L9)
+[types.ts:9](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/types.ts#L9)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[types.ts:7](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/types.ts#L7)
+[types.ts:7](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/types.ts#L7)
 
 ___
 
@@ -44,4 +44,4 @@ ___
 
 #### Defined in
 
-[types.ts:8](https://github.com/mithraiclabs/psyoptions-ts/blob/369ef93/packages/psy-american/src/types.ts#L8)
+[types.ts:8](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/types.ts#L8)

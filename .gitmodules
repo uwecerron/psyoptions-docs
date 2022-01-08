@@ -1,0 +1,3 @@
+[submodule "psyoptions-ts"]
+	path = psyoptions-ts
+	url = https://github.com/mithraiclabs/psyoptions-ts
