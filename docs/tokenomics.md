@@ -18,8 +18,8 @@ The PsyOptions protocol does generate fees from minting and exercising, volume o
     <li>Token Type: SPL</li>
     <li>Token Contract: PsyFiqqjiv41G7o5SMRzDJCu4psptThNR2GtfeGHfSq</li>
 </ul>
-
-The PSY Token breakdown is as follows:
+<img src="/img/tokenomics.png" />
+<strong>The PSY Token breakdown is as follows:</strong>
 
 <ul>
     <li>Team/Contributors/Advisors: 15%</li>
