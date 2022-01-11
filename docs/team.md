@@ -71,6 +71,10 @@ The resident DeFi Degen, stockmart is primarily focused on research and governan
 
 ## Contributors 
 
+### XYZ
+
+Front-end, and design contributor. 
+
 ### HypeQuant
 
 Building a Python options market making bot. 
@@ -103,6 +107,14 @@ Chinese translator.
     <li>Discord: CopyCat#2176</li>
 </ul>
 
+### KoldBreu
+
+Design contributor. 
+<strong>Connect</strong>
+<ul>
+    <li>Discord: koldbreu#7620</li>
+</ul>
+
 ### EvanP
 Derivatives quant advisor.
 <strong>Connect</strong>
@@ -124,4 +136,28 @@ Derivatives quant adivsor.
 <strong>Connect</strong>
 <ul>
     <li>Discord: RAD#5052</li>
+</ul>
+
+### 0xBenchy
+
+Partnerships and Community contributor. 
+<strong>Connect</strong>
+<ul>
+    <li>Discord: 0xBenchy#4471</li>
+</ul>
+
+### Khalid
+
+International Community Moderator.
+<strong>Connect</strong>
+<ul>
+    <li>Discord: CryptoRfa#2473</li>
+</ul>
+
+### Juna
+
+International Community Moderator.
+<strong>Connect</strong>
+<ul>
+    <li>Discord: Juna#2819</li>
 </ul>
