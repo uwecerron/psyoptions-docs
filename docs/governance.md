@@ -13,7 +13,6 @@ Proposals are executable code, not suggestions for a team or foundation to imple
 
 All proposals are subject to a 3 day voting period, and any address with PSY delegated can vote for or against the proposal. If a majority, and at least 2% of the PSY token supply are cast for the proposal, it is queued in the Timelock, and can be implemented after 2 days.
 
-<b>NOTE: Governance infrastructure is being actively developed on Solana at this time. With only 6.2% of the PSY token supply in circulation post-IEO, the requirement for at least 2% of the PSY token supply being cast for a proposal is unlikely to be accomplished, making this requirement subject to change. However, when the proper infrastructure that allows vested tokens to participate in governance is developed, we will move forward with the 2% requirement.</b>
 
 PsyOptions aims to foster an engaging and collaboritive community, join our 
 [Discord](https://discord.com/invite/MgDdJKgZJc) or [Telegram](https://t.me/psyoptions) 
