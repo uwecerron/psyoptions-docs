@@ -13,6 +13,7 @@ Proposals are executable code, not suggestions for a team or foundation to imple
 
 All proposals are subject to a 3 day voting period, and any address with PSY delegated can vote for or against the proposal. If a majority, and at least 2% of the PSY token supply are cast for the proposal, it is queued in the Timelock, and can be implemented after 2 days.
 
+
 PsyOptions aims to foster an engaging and collaboritive community, join our 
 [Discord](https://discord.com/invite/MgDdJKgZJc) or [Telegram](https://t.me/psyoptions) 
 to get involved in the conversations! Note: The core contributors are most active in Discord.

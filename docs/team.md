@@ -73,7 +73,7 @@ The resident DeFi Degen, stockmart is primarily focused on research and governan
 
 ### XYZ
 
-Front-end, and design contributor. 
+Contributed to product planning, design, and engineering; branding and vision; fundraising that lead to a closed deal.
 
 ### HypeQuant
 
@@ -161,3 +161,4 @@ International Community Moderator.
 <ul>
     <li>Discord: Juna#2819</li>
 </ul>
+
