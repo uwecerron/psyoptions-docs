@@ -32,7 +32,7 @@ or the quote assets in the pool have already been claimed.
 
 #### Defined in
 
-[instructions/burnWriterForQuote.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/burnWriterForQuote.ts#L17)
+[instructions/burnWriterForQuote.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/burnWriterForQuote.ts#L17)
 
 ___
 
@@ -59,7 +59,7 @@ Close _size_ option positions by burning the OptionTokens and WriterTokens.
 
 #### Defined in
 
-[instructions/closePosition.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/closePosition.ts#L16)
+[instructions/closePosition.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/closePosition.ts#L16)
 
 ___
 
@@ -86,7 +86,7 @@ the contract(s).
 
 #### Defined in
 
-[instructions/closePostExpiration.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/closePostExpiration.ts#L16)
+[instructions/closePostExpiration.ts:16](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/closePostExpiration.ts#L16)
 
 ___
 
@@ -115,7 +115,7 @@ Exercise OptionTokens you're holding
 
 #### Defined in
 
-[instructions/exerciseOptions.ts:20](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/exerciseOptions.ts#L20)
+[instructions/exerciseOptions.ts:20](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/exerciseOptions.ts#L20)
 
 ___
 
@@ -143,7 +143,7 @@ Initialize a new OptionMarket
 
 #### Defined in
 
-[instructions/initializeMarket.ts:29](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/initializeMarket.ts#L29)
+[instructions/initializeMarket.ts:29](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/initializeMarket.ts#L29)
 
 ___
 
@@ -173,7 +173,7 @@ ___
 
 #### Defined in
 
-[instructions/initializeSerumMarket.ts:23](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/initializeSerumMarket.ts#L23)
+[instructions/initializeSerumMarket.ts:23](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/initializeSerumMarket.ts#L23)
 
 ___
 
@@ -200,7 +200,34 @@ Create a TransactionInstruction for minting _size_ option contracts
 
 #### Defined in
 
-[instructions/mintOptions.ts:79](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/mintOptions.ts#L79)
+[instructions/mintOptions.ts:91](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/mintOptions.ts#L91)
+
+___
+
+### mintOptionV2Instruction
+
+▸ `Const` **mintOptionV2Instruction**(`program`, `minterOptionAcct`, `minterWriterAcct`, `minterUnderlyingAccount`, `size`, `optionMarket`): `Promise`<`Object`\>
+
+Create a TransactionInstruction for minting _size_ option contracts using V2 instruction
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `program` | `Program` | Anchor Program for the PsyAmerican program and the minter as the provider wallet |
+| `minterOptionAcct` | `PublicKey` | Where the OptionTokens will be sent |
+| `minterWriterAcct` | `PublicKey` | Where the WriterTokens will be sent |
+| `minterUnderlyingAccount` | `PublicKey` | Where the underlying asset tokens come from |
+| `size` | `BN` | The amount of contracts to mint |
+| `optionMarket` | [`OptionMarketWithKey`](../modules#optionmarketwithkey) | The OptionMarket data |
+
+#### Returns
+
+`Promise`<`Object`\>
+
+#### Defined in
+
+[instructions/mintOptions.ts:155](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/mintOptions.ts#L155)
 
 ___
 
@@ -227,4 +254,4 @@ Execute a transaction to mint _size_ options
 
 #### Defined in
 
-[instructions/mintOptions.ts:17](https://github.com/mithraiclabs/psyoptions-ts/blob/e5fa046/packages/psy-american/src/instructions/mintOptions.ts#L17)
+[instructions/mintOptions.ts:28](https://github.com/mithraiclabs/psyoptions-ts/blob/0830124/packages/psy-american/src/instructions/mintOptions.ts#L28)
