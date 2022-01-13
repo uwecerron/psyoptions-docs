@@ -7,7 +7,7 @@
     "start": "./pre_build.sh && docusaurus start",
     "build": "./pre_build.sh && docusaurus build",
     "swizzle": "docusaurus swizzle",
-    "deploy": "docusaurus deploy",
+    "deploy": "./pre_build.sh && docusaurus deploy",
     "serve": "docusaurus serve",
     "clear": "docusaurus clear",
     "crowdin": "crowdin",
