@@ -276,7 +276,7 @@ ___
 ▸ `Const` **getOrAddAssociatedTokenAccountTx**(`associatedAddress`, `mintKey`, `provider`, `owner?`): `Promise`<`TransactionInstruction`\>
 
 Returns a TransactionInstruction for creating the associated token account
-if one deos not exist.
+if one does not exist.
 
 #### Parameters
 
